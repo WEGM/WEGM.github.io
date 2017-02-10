@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="Content-Language" content="zh-cn" />
+    <meta http-equiv="X-UA-Compatible" content = "IE=edge,chrome=1" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" >
+    <meta name="author" content="luoyao" />
+    <meta name="Copyright" content="SeedUI" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
+    <meta name="Description" content="" />
+    <meta name="Keywords" content="" />
+    <title>SeedUI-前端设计的萌芽</title>
+    <script type="text/javascript">
+        try {
+            document.domain = "seedui.com";
+        } catch (e) {};
+        var timePoint = {
+            initTime:new Date().getTime(),  
+            pointMap:{},
+            /**
+             *标记需要上报的时间点（注意：时间点标记要求页面加载后会被执行，需要用户触发的时间点将被上报延迟）
+             *@param {string} name 当前时间点名称
+             *@param {int} pointIndex 当前标记的时间点顺序，当pointIndex<0时表示不上报，当pointIndex>0时对应上报时的参数索引
+             *@param {string=“initTime”} startPointName 当前时间点计算时的起始点，默认为initTime
+             */
+            mark:function (name, pointIndex, startPointName) {
+                //记录当前时间点名称，时间，和比较时间点（默认为初始化时间）
+                startPointName = startPointName || 'initTime';
+                timePoint.pointMap[name] = [name, new Date().getTime(), startPointName, pointIndex];
+            }
+        };
+    </script>
+    <script type="text/javascript">
+    (function () {
+        var ua = navigator.userAgent.toLowerCase(),
+            isIOS = /iphone|ipad|ipod|itouch/.test(ua),
+            isAndroid = /android/.test(ua);
+        if (isIOS || isAndroid) {
+            // window.location.href= "http://m.seedui.com/";
+        }
+    })();
+    </script>
+    <script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>
+    <script type="text/javascript">
+        // $youziku.load("body", "314d7ce68814490ba56807414a2b72f1", "JY3");
+        $youziku.load(".sfonts", "314d7ce68814490ba56807414a2b72f1", "JY3");
+        $youziku.load(".main-nav", "3e69008b1b6b4d12952af5b1c7a2a6b8", "jdyuantijian");
+        $youziku.draw();
+    </script>
+    <link rel="stylesheet" type="text/css" href="./css/base.css">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header class="main-header features2">
+            <div class="container">
+                <a href="/" class="logo-link">
+                    <div class="logo"></div>
+                </a>
+                <nav class="main-nav" style="display: none;">
+                    <div class="blue-button small" id="signup">
+                        <span>联系我</span>
+                        <div class="signup-arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7px" height="6px"><path fill-rule="evenodd" fill="rgb(255, 255, 255)" d="M3.011,0.530 L3.011,0.530 L3.011,1.479 L3.011,1.532 C2.997,1.775 2.801,1.969 2.558,1.973 C2.556,1.973 2.553,1.973 2.550,1.973 C2.548,1.973 2.545,1.973 2.542,1.973 L0.513,1.973 L0.409,1.973 C0.179,1.999 -0.000,2.197 -0.000,2.437 L-0.000,3.535 C-0.000,3.772 0.173,3.967 0.399,3.998 L0.523,3.998 L2.498,3.998 L2.602,3.998 C2.824,4.023 2.998,4.207 3.011,4.435 L3.011,4.489 L3.011,5.689 L3.011,5.689 C3.011,5.861 3.149,6.001 3.319,6.001 C3.383,6.001 3.444,5.981 3.493,5.947 L3.535,5.911 L6.835,3.361 C6.937,3.276 7.003,3.146 7.003,3.001 C7.003,2.856 6.937,2.726 6.835,2.641 L3.538,0.312 L3.488,0.270 C3.439,0.237 3.381,0.219 3.319,0.219 C3.149,0.219 3.011,0.359 3.011,0.530 Z"></path></svg>
+                        </div>
+                    </div>
+                    <a class="company">摇电视<img src="./images/down-caret.png" class="caret"></a>
+                    <a class="features">最美H5<img src="./images/down-caret.png" class="caret"></a>
+                    <a class="solutions">UI设计<img src="./images/down-caret.png" class="caret"></a>
+                    <a href="/pricing/" class="header-nav-button">首页</a>
+                </nav>
+            </div>
+            <nav class="header-nav feature-nav2">
+                <div class="nav-container anonymous features">
+                    <div class="title-container">
+                        <div class="title">Analytics</div>
+                        <div class="title-spacer"></div>
+                        <div class="title">Marketing</div>
+                    </div>
+                    <div class="section left analytics">
+                        <div class="row one">
+                            <a href="/engagement/" class="feature-link">
+                                <div class="feature-info">
+                                    <div class="feature-icon engagement"></div>
+                                    <div class="feature-name">Engagement</div>
+                                    <div class="feature-text">Measure the actions that people take in your application</div>
+                                </div>
+                            </a>
+                            <a href="/retention/" class="feature-link">
+                                <div class="feature-info">
+                                    <div class="feature-icon retention"></div>
+                                    <div class="feature-name">Retention</div>
+                                    <div class="feature-text">Find out if people love your app by seeing if they come back</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <a href="/funnels/" class="feature-link">
+                                <div class="feature-info">
+                                    <div class="feature-icon funnel"></div>
+                                    <div class="feature-name">Funnel</div>
+                                    <div class="feature-text">Pinpoint where &amp; why you're losing customers</div>
+                                </div>
+                            </a>
+                            <a href="/autotrack/" class="feature-link">
+                                <div class="feature-info">
+                                    <div class="feature-icon autotrack"></div>
+                                    <div class="feature-name">Autotrack</div>
+                                    <div class="feature-text">Automatically collect everything and track anything</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="section right marketing">
+                        <div class="row">
+                            <a href="/notifications/" class="feature-link">
+                                <div class="feature-info">
+                                    <div class="feature-icon notifications"></div>
+                                    <div class="feature-name">Notifications</div>
+                                    <div class="feature-text">Get your customers to<br>come back with email<br>or push notifications</div>
+                                </div>
+                            </a>
+                            <a href="/people/" class="feature-link">
+                                <div class="feature-info">
+                                    <div class="feature-icon people"></div>
+                                    <div class="feature-name">People</div>
+                                    <div class="feature-text">Discover who your users<br>are and what they do</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="row">
+                            <a href="/mobile-ab-testing/" class="feature-link">
+                                <div class="feature-info">
+                                    <div class="feature-icon abtesting"></div>
+                                    <div class="feature-name">A/B Testing</div>
+                                    <div class="feature-text">Find the optimal<br>experience for your users<br>by experimenting</div>
+                                </div>
+                            </a>
+                            <a href="/jql/" class="feature-link">
+                                <div class="feature-info">
+                                    <div class="feature-icon jql"></div>
+                                    <div class="feature-name">JQL</div>
+                                    <div class="feature-text">Write powerful queries<br>to analyze your data</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <nav class="header-nav company-nav">
+                <div class="nav-container anonymous company">
+                    <a href="/about/" class="company-link">
+                        <div class="company-link-image about">
+                            <div class="company-link-normal"></div>
+                            <div class="company-link-highlighted"></div>
+                        </div>
+                        <span>About us</span>
+                    </a>
+                    <hr class="company-link-separator">
+                    <a href="/jobs/" class="company-link">
+                        <div class="company-link-image jobs">
+                            <div class="company-link-normal"></div>
+                            <div class="company-link-highlighted"></div>
+                        </div>
+                        <span>Jobs</span>
+                    </a>
+                    <hr class="company-link-separator">
+                    <a href="https://blog.mixpanel.com/" class="company-link">
+                        <div class="company-link-image blog">
+                            <div class="company-link-normal"></div>
+                            <div class="company-link-highlighted"></div>
+                        </div>
+                        <span>Blog</span>
+                    </a>
+                </div>
+            </nav>
+            <nav class="header-nav solutions-nav">
+                <div class="nav-container anonymous solutions">
+                    <div class="row">
+                        <a href="/solutions/financial-services" class="feature-link">
+                            <div class="feature-info">
+                                <div class="feature-icon financial"></div>
+                                <div class="feature-name">Financial Services</div>
+                                <div class="feature-text">Identify the opportunity inside your product.</div>
+                            </div>
+                        </a>
+                        <a href="/solutions/saas" class="feature-link">
+                            <div class="feature-info">
+                                <div class="feature-icon saas"></div>
+                                <div class="feature-name">SaaS</div>
+                                <div class="feature-text">Catch your customers before they churn.</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <a href="/solutions/consumer-technology" class="feature-link">
+                            <div class="feature-info">
+                                <div class="feature-icon consumer-tech"></div>
+                                <div class="feature-name">Consumer Tech</div>
+                                <div class="feature-text">Drive your users to<br>take action.</div>
+                            </div>
+                        </a>
+                        <a href="/solutions/media-entertainment" class="feature-link">
+                            <div class="feature-info">
+                                <div class="feature-icon media"></div>
+                                <div class="feature-name">Media &amp; Entertainment</div>
+                                <div class="feature-text">Serve up content that captivates.</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="marketing-page page-content" data-page="about">
+            <section class="hero anim-hero anim-hero-complete">
+                <div class="container content">
+                    <h1 class="hero-title sfonts">发现更实用的小工具</h1>
+                    <p class="intro sfonts"></p>
+                    <div class="searchbar">
+                        <input class="b_searchbox" id="sb_form_q" name="q" title="输入搜索词" type="search" value="" maxlength="100" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="both" aria-haspopup="true" aria-expanded="false" aria-controls="sw_as" aria-owns="sw_as">
+                        <p class="sfonts b_searchboxSubmit"><input type="submit" class="sfonts b_searchboxSubmit" id="sb_form_go" title="搜索" tabindex="0" name="go"></p>
+                        <div id="sw_as" role="listbox" aria-label="建议" style="display: block; margin-left: -1px; margin-right: 1px;"><div class="sa_as" data-priority="2" data-bm="28"><span></span></div></div>
+                    </div>
+                    <div class="hero-globe about-globe-animation">
+                        <div class="globe-static-dots dots globe-dots-fadein"></div>
+                        <div class="globe-static-dots space-dust-1 globe-dots-fadein"></div>
+                        <div class="globe-static-dots space-dust-2 globe-dots-fadein"></div>
+                        <div class="globe-static-dots space-dust-3 globe-dots-fadein"></div>
+                        <div class="globe-static-dots space-dust-4 globe-dots-fadein"></div>
+                        <div class="globe-static-dots space-dust-5 globe-dots-fadein"></div>
+                        <div class="globe-static-dots space-dust-6 globe-dots-fadein"></div>
+                        <div class="globe-static-dots space-dust-7 globe-dots-fadein"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="main-footer" style="display: none;">
+            <div class="container">
+                <div class="container-section">
+                    <div class="links-section">
+                        <div class="links-section-title">Products</div>
+                        <ul class="footer-list two-column-list">
+                            <li class="footer-list-item">
+                                <a href="/engagement/" class="footer-list-link">Engagement</a></li>
+                            <li class="footer-list-item">
+                                <a href="/people/" class="footer-list-link">People Analytics</a></li>
+                            <li class="footer-list-item">
+                                <a href="/funnels/" class="footer-list-link">Funnels</a></li>
+                            <li class="footer-list-item">
+                                <a href="/mobile-ab-testing/" class="footer-list-link">Mobile A/B Testing</a></li>
+                        </ul>
+                    </div>
+                    <div class="links-section">
+                        <div class="links-section-title">Solutions</div>
+                        <ul class="footer-list one-column-list">
+                            <li class="footer-list-item">
+                                <a href="/solutions/consumer-technology" class="footer-list-link">Consumer</a></li>
+                        </ul>
+                    </div>
+                    <div class="links-section">
+                        <div class="links-section-title">Resources</div>
+                        <ul class="footer-list one-column-list">
+                            <li class="footer-list-item">
+                                <a href="/help/" class="footer-list-link">Support</a></li>
+                            <li class="footer-list-item">
+                                <a href="https://blog.mixpanel.com/" class="footer-list-link">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="links-section">
+                        <div class="links-section-title">Company</div>
+                        <ul class="footer-list one-column-list">
+                            <li class="footer-list-item">
+                                <a href="/about/" class="footer-list-link">About us</a></li>
+                            <li class="footer-list-item">
+                                <a href="/jobs/" class="footer-list-link">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="links-section last">
+                        <div class="links-section-title">Follow</div>
+                        <div class="follow-buttons-section">
+                            <a href="https://twitter.com/mixpanel" target="_blank">
+                                <div class="follow-button follow-button-twitter"></div>
+                            </a>
+                            <a href="https://www.facebook.com/mixpanel/" target="_blank">
+                                <div class="follow-button follow-button-facebook"></div>
+                            </a>
+                            <a href="https://www.linkedin.com/company/mixpanel-inc-" target="_blank">
+                                <div class="follow-button follow-button-linkedin"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+    <script src="./js/nav.js"></script>
+</body>
+</html>
