@@ -635,6 +635,12 @@
             // Enter
             if (data.$autocompleter.hasClass('autocompleter-show') && data.$selected) {
                 _select(e);
+            } else if (data.$node.attr('data-url')) {
+                window.open(data.$node.attr('data-url'));
+                data.$node.removeAttr('data-url').val('');
+            } else if (data.$node.length > 0 && $('.autocompleter').hasClass('autocompleter-closed')) {
+                window.open('https://www.baidu.com/s?ie=utf-8&wd=' + data.$node.val());
+                data.$node.val('');
             }
         }
     }
@@ -800,7 +806,8 @@
                 console.log('selected' + data.$selected);
             } else if (e.type === 'keydown') {
                 if (data.$node.attr('data-url')) {
-                    window.open(data.$node.attr('data-url'));   
+                    window.open(data.$node.attr('data-url'));
+                    data.$node.removeAttr('data-url').val('');
                 } else {
                     // alert('没有找到');
                 }

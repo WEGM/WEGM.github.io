@@ -524,8 +524,27 @@
         }, 1e3);
     };
 
-    resize();
-    $(window).resize(function(){
-        resize();
-    });
+    function event() {
+    	var $s_input = $('#sb_form_q');
+    	var $s_enter = $('#sb_form_go');
+    	$s_enter.click(function(e){
+	        e.preventDefault();
+	        if ($s_input.attr('data-url')) {
+	        	$s_input.removeAttr('data-url');
+                window.open($s_input.attr('data-url'));
+	        } else if ($s_input.length > 0 && $('.autocompleter').hasClass('autocompleter-closed')) {
+	        	window.open('https://www.baidu.com/s?ie=utf-8&wd=' + $s_input.val());
+	        	$s_input.val('');
+	        }
+    	});
+    };
+
+    function nav_init() {
+    	event();
+	    resize();
+	    $(window).resize(function(){
+	        resize();
+	    });
+    };
+    nav_init();
 })("http://www.seedui.com", window);
