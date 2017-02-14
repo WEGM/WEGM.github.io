@@ -2,8 +2,6 @@ html,body {
 	width:100%;
 	padding:0;
 	margin:0;
-	overflow: hidden;
-	overflow-y: scroll;
 }
 #wrapper {
 	width: 100%;
@@ -11,10 +9,11 @@ html,body {
 	overflow: hidden;
 }
 html {
-	box-sizing:border-box
+	box-sizing:border-box;
 }
 body {
-	overflow-y:scroll
+	overflow: hidden;
+	overflow-y: scroll;
 }
 *,*:before,*:after {
 	box-sizing:inherit
