@@ -532,10 +532,10 @@
 	        if ($s_input.attr('data-url')) {
 	        	$s_input.removeAttr('data-url');
                 window.open($s_input.attr('data-url'));
-	        } else if ($s_input.length > 0 && $('.autocompleter').hasClass('autocompleter-closed')) {
-	        	window.open('https://www.baidu.com/s?ie=utf-8&wd=' + $s_input.val());
-	        	$s_input.val('');
-	        }
+	        } else if ($s_input.length > 0 && !$s_input.attr('data-url') && $('.autocompleter').hasClass('autocompleter-closed')) {
+                window.open('https://www.baidu.com/s?ie=utf-8&wd=' + $s_input.val());
+                $s_input.val('');
+            }
     	});
     };
 

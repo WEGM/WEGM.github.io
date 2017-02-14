@@ -2,7 +2,7 @@
  * Crayola colors in JSON format
  * from: https://gist.github.com/jjdelc/1868136
  */
-var colors =
+var data =
 [
     {
         "hex": "#FFF",
@@ -36,7 +36,7 @@ $(function () {
         highlightMatches: true,
 
         // object to local or url to remote search
-        source: colors,
+        source: data,
 
         // custom template
         template: '{{ label }} <span>({{ hex }})</span>',
@@ -52,7 +52,19 @@ $(function () {
 
         callback: function (value, index, selected) {
             if (selected) {
+                window.open(selected.site_url);
+                // data.$node.removeAttr('data-url').val('');
                 // $('.icon').css('background-color', selected.hex);
+            } else {
+                var $s_input = $('#sb_form_q');
+                var $s_enter = $('#sb_form_go');
+                if ($s_input.attr('data-url')) {
+                    window.open($s_input.attr('data-url'));
+                    $s_input.removeAttr('data-url');
+                } else if ($s_input.length > 0 && $s_input.attr('data-url')) {
+                    window.open('https://www.baidu.com/s?ie=utf-8&wd=' + $s_input.val());
+                    $s_input.val('');
+                }
             }
         }
     });

@@ -1,8 +1,14 @@
 html,body {
 	width:100%;
-	height:100%;
 	padding:0;
-	margin:0
+	margin:0;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+#wrapper {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 html {
 	box-sizing:border-box
@@ -41,7 +47,7 @@ p {
 	-webkit-font-smoothing:antialiased
 }
 .container {
-	width:1140px;
+	width:90%;
 	margin:0 auto
 }
 .anim-hero .anim-from-left {
@@ -298,7 +304,9 @@ p {
 	margin:22px 0 34px
 }
 [data-page="about"] section.hero .hero-title {
-	font-size:30px
+	/*font-size:30px;*/
+    font-size: 1.7rem;
+    margin-bottom: 20px;
 }
 [data-page="about"] section.hero .hero-globe {
 	background-image:url('../images/globe.png');
@@ -1001,6 +1009,8 @@ p {
 	-webkit-transition:background .4s ease;
 	transition:background .4s ease;
 	width:100%;
+	height: 93px;
+	overflow: hidden;
 	z-index:3;
 	*zoom:1
 }
@@ -1017,7 +1027,7 @@ p {
 	transition-delay:0s
 }
 .main-header .container {
-	width:1140px
+	width:96% !important;
 }
 .main-header .logo-link {
 	display:block
@@ -1768,15 +1778,19 @@ section.getting-started-mixpanel-2 .register-button {
 }
 [data-page="about"] .searchbar {
 	position: relative;
-	display: inline-block;
+    width: 90%;
+    max-width: 630px;
+	display: block;
 	font-size: 0;
+	margin: 0 auto;
 }
 [data-page="about"] .searchbar input[name="q"] {
 	display: inline-block;
-	width: 630px;
+	width: 100%;
 	height: 50px;
 	border-top-left-radius: 6px;
 	border-bottom-left-radius: 6px;
+	border-radius: 6px;
 	box-shadow: 1px 1px 1px rgba(0,0,0,.1) inset;
 	vertical-align: bottom;
 	font-size: 18px;
@@ -1831,7 +1845,7 @@ section.getting-started-mixpanel-2 .register-button {
 }
 
 .autocompleter {
-    width: 630px;
+    width: 100%;
     background: #dddddd;
     position: absolute;
     top: 50px;
@@ -1936,7 +1950,7 @@ section.getting-started-mixpanel-2 .register-button {
 	left: 0;
 	z-index: 2;
 	pointer-events: none;
-    background: rgba(0,0,0,.8);
+    background: rgba(0,0,0,.75);
 
     -webkit-transition: all .3s;
     transition: all .3s;

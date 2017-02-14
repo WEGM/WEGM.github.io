@@ -116,3 +116,9 @@ a {
 	font-weight:900;
 	padding:0 17px
 }
+
+::selection {
+    color: #fff;
+    text-shadow: none;
+    background-color: #c400bb;
+}
