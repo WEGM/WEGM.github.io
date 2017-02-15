@@ -518,6 +518,9 @@
 
 (function(basePath, A, w) {
     function resize() {
+    	var deviceWidth = document.documentElement.clientWidth;  
+        if(deviceWidth > 640) deviceWidth = 640;  
+        document.documentElement.style.fontSize = deviceWidth / 6.4 + 'px';  
         $('.hero').css({'height':$(window).height() + 'px'});
         setTimeout(function(){
             $('.hero-globe').css({'transform':'scale(' + $(window).height()/950 + ')'});
