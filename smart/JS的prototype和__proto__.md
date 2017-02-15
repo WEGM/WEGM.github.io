@@ -1,4 +1,4 @@
-JS的prototype和__proto__
+### JS的prototype和__proto__
 
 一、prototype和__proto__的概念
 
@@ -10,8 +10,8 @@ __proto__是一个对象拥有的内置属性（请注意：prototype是函数�
 
 二、new 的过程
 
-var Person = function(){};
-var p = new Person();
+	var Person = function(){};
+	var p = new Person();
 new的过程拆分成以下三步：
 (1) var p={}; 也就是说，初始化一个对象p
 (2) p.__proto__ = Person.prototype;
@@ -19,14 +19,15 @@ new的过程拆分成以下三步：
 
 关键在于第二步，我们来证明一下：
 
-var Person = function(){};
-var p = new Person();
-alert(p.__proto__ === Person.prototype);
+	var Person = function(){};
+	var p = new Person();
+	alert(p.__proto__ === Person.prototype);
 这段代码会返回true。说明我们步骤2是正确的。
 
 三、示例
 
-复制代码
+
+
     var Person = function(){};
     Person.prototype.sayName = function() {
         alert("My Name is Jacky");
@@ -35,7 +36,8 @@ alert(p.__proto__ === Person.prototype);
     Person.prototype.age = 27;
     var p = new Person();
     p.sayName();
-复制代码
+
+
 p是一个引用指向Person的对象。我们在Person的原型上定义了一个sayName方法和age属性，当我们执行p.age时，会先在this的内部查找（也就是构造函数内部），如果没有找到然后再沿着原型链向上追溯。
 
 这里的向上追溯是怎么向上的呢？这里就要使用__proto__属性来链接到原型（也就是Person.prototype）进行查找。最终在原型上找到了age属性。
