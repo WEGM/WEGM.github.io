@@ -1,522 +1,815 @@
-// (function(basePath, A, w) {
-//     function J() {
-//         return (new Date).getTime()
-//     }
-//     function Y() {
-//         return false
-//     }
-//     function Z() {
-//         return true
-//     }
-//     var c = function(a, b) {
-//         return new c.fn.init(a, b)
-//     },
-//     Ra = A.jQuery,
-//     Sa = A.$,
-//     s = A.document,
-//     T,
-//     Ta = /^[^<]*(<[\w\W]+>)[^>]*$|^#([\w-]+)$/,
-//     Ua = /^.[^:#\[\.,]*$/,
-//     Va = /\S/,
-//     Wa = /^(\s|\u00A0)+|(\s|\u00A0)+$/g,
-//     Xa = /^<(\w+)\s*\/?>(?:<\/\1>)?$/,
-//     P = navigator.userAgent,
-//     xa = false,
-//     Q = [],
-//     L,
-//     $ = Object.prototype.toString,
-//     aa = Object.prototype.hasOwnProperty,
-//     ba = Array.prototype.push,
-//     R = Array.prototype.slice,
-//     ya = Array.prototype.indexOf;
-//     c.fn = c.prototype = {
-//         init: function(a, b) {
-//             var d, f;
-//             if (!a) return this;
-//             if (a.nodeType) {
-//                 this.context = this[0] = a;
-//                 this.length = 1;
-//                 return this
-//             }
-//             if (a === "body" && !b) {
-//                 this.context = s;
-//                 this[0] = s.body;
-//                 this.selector = "body";
-//                 this.length = 1;
-//                 return this
-//             }
-//             if (typeof a === "string") if ((d = Ta.exec(a)) && (d[1] || !b)) if (d[1]) {
-//                 f = b ? b.ownerDocument || b: s;
-//                 if (a = Xa.exec(a)) if (c.isPlainObject(b)) {
-//                     a = [s.createElement(a[1])];
-//                     c.fn.attr.call(a, b, true)
-//                 } else a = [f.createElement(a[1])];
-//                 else {
-//                     a = sa([d[1]], [f]);
-//                     a = (a.cacheable ? a.fragment.cloneNode(true) : a.fragment).childNodes
-//                 }
-//                 return c.merge(this, a)
-//             } else {
-//                 if (b = s.getElementById(d[2])) {
-//                     if (b.id !== d[2]) return T.find(a);
-//                     this.length = 1;
-//                     this[0] = b
-//                 }
-//                 this.context = s;
-//                 this.selector = a;
-//                 return this
-//             } else if (!b && /^\w+$/.test(a)) {
-//                 this.selector = a;
-//                 this.context = s;
-//                 a = s.getElementsByTagName(a);
-//                 return c.merge(this, a)
-//             } else return ! b || b.jquery ? (b || T).find(a) : c(b).find(a);
-//             else if (c.isFunction(a)) return T.ready(a);
-//             if (a.selector !== w) {
-//                 this.selector = a.selector;
-//                 this.context = a.context
-//             }
-//             return c.makeArray(a, this)
-//         }
-//     };
-//     c.fn.init.prototype = c.fn;
-//     c.extend = c.fn.extend = function() {
-//         var a = arguments[0] || {},
-//         b = 1,
-//         d = arguments.length,
-//         f = false,
-//         e,
-//         j,
-//         i,
-//         o;
-//         if (typeof a === "boolean") {
-//             f = a;
-//             a = arguments[1] || {};
-//             b = 2
-//         }
-//         if (typeof a !== "object" && !c.isFunction(a)) a = {};
-//         if (d === b) {
-//             a = this; --b
-//         }
-//         for (; b < d; b++) if ((e = arguments[b]) != null) for (j in e) {
-//             i = a[j];
-//             o = e[j];
-//             if (a !== o) if (f && o && (c.isPlainObject(o) || c.isArray(o))) {
-//                 i = i && (c.isPlainObject(i) || c.isArray(i)) ? i: c.isArray(o) ? [] : {};
-//                 a[j] = c.extend(f, i, o)
-//             } else if (o !== w) a[j] = o
-//         }
-//         return a
-//     };
-//     c.extend({
-//         isFunction: function(a) {
-//             return $.call(a) === "[object Function]"
-//         },
-//         isArray: function(a) {
-//             return $.call(a) === "[object Array]"
-//         },
-//         isPlainObject: function(a) {
-//             if (!a || $.call(a) !== "[object Object]" || a.nodeType || a.setInterval) return false;
-//             if (a.constructor && !aa.call(a, "constructor") && !aa.call(a.constructor.prototype, "isPrototypeOf")) return false;
-//             var b;
-//             for (b in a);
-//             return b === w || aa.call(a, b)
-//         }
-//     });
-//     T = c(s);
-//     if (s.addEventListener) L = function() {
-//         s.removeEventListener("DOMContentLoaded", L, false);
-//         c.ready()
-//     };
-//     else if (s.attachEvent) L = function() {
-//         if (s.readyState === "complete") {
-//             s.detachEvent("onreadystatechange", L);
-//             c.ready()
-//         }
-//     }; 
-// 	//++++++++++++++++++++++++++++++++++++++++++++++
-//     var G = "jQuery" + J();
-//     var O = /\.(.*)$/;
-//     c.event = {
-//         global: {},
-//         trigger: function(a, b, d, f) {
-//             var e = a.type || a;
-//             if (!f) {
-//                 a = typeof a === "object" ? a[G] ? a: c.extend(c.Event(e), a) : c.Event(e);
-//                 if (e.indexOf("!") >= 0) {
-//                     a.type = e = e.slice(0, -1);
-//                     a.exclusive = true
-//                 }
-//                 if (!d) {
-//                     a.stopPropagation();
-//                     c.event.global[e] && c.each(c.cache,
-//                     function() {
-//                         this.events && this.events[e] && c.event.trigger(a, b, this.handle.elem)
-//                     })
-//                 }
-//                 if (!d || d.nodeType === 3 || d.nodeType === 8) return w;
-//                 a.result = w;
-//                 a.target = d;
-//                 b = c.makeArray(b);
-//                 b.unshift(a)
-//             }
-//             a.currentTarget = d; (f = c.data(d, "handle")) && f.apply(d, b);
-//             f = d.parentNode || d.ownerDocument;
-//             try {
-//                 if (! (d && d.nodeName && c.noData[d.nodeName.toLowerCase()])) if (d["on" + e] && d["on" + e].apply(d, b) === false) a.result = false
-//             } catch(j) {}
-//             if (!a.isPropagationStopped() && f) c.event.trigger(a, b, f, true);
-//             else if (!a.isDefaultPrevented()) {
-//                 f = a.target;
-//                 var i, o = c.nodeName(f, "a") && e === "click",
-//                 k = c.event.special[e] || {};
-//                 if ((!k._default || k._default.call(d, a) === false) && !o && !(f && f.nodeName && c.noData[f.nodeName.toLowerCase()])) {
-//                     try {
-//                         if (f[e]) {
-//                             if (i = f["on" + e]) f["on" + e] = null;
-//                             c.event.triggered = true;
-//                             f[e]()
-//                         }
-//                     } catch(n) {}
-//                     if (i) f["on" + e] = i;
-//                     c.event.triggered = false
-//                 }
-//             }
-//         }
-//     };
-//     var Ca = s.removeEventListener ?
-//     function(a, b, d) {
-//         a.removeEventListener(b, d, false)
-//     }: function(a, b, d) {
-//         a.detachEvent("on" + b, d)
-//     };
-//     c.Event = function(a) {
-//         if (!this.preventDefault) return new c.Event(a);
-//         if (a && a.type) {
-//             this.originalEvent = a;
-//             this.type = a.type
-//         } else this.type = a;
-//         this.timeStamp = J();
-//         this[G] = true
-//     };
-//     c.Event.prototype = {
-//         preventDefault: function() {
-//             this.isDefaultPrevented = Z;
-//             var a = this.originalEvent;
-//             if (a) {
-//                 a.preventDefault && a.preventDefault();
-//                 a.returnValue = false
-//             }
-//         },
-//         stopPropagation: function() {
-//             this.isPropagationStopped = Z;
-//             var a = this.originalEvent;
-//             if (a) {
-//                 a.stopPropagation && a.stopPropagation();
-//                 a.cancelBubble = true
-//             }
-//         },
-//         isDefaultPrevented: Y,
-//         isPropagationStopped: Y,
-//         isImmediatePropagationStopped: Y
-//     };
-//     var sb = J(),
-//     tb = /<script(.|\s)*?\/script>/gi,
-//     ub = /select|textarea/i,
-//     vb = /color|date|datetime|email|hidden|month|number|password|range|search|tel|text|time|url|week/i,
-//     N = /=\?(&|$)/,
-//     ka = /\?/,
-//     wb = /(\?|&)_=.*?(&|$)/,
-//     xb = /^(\w+:)?\/\/([^\/?#]+)/,
-//     yb = /%20/g,
-//     zb = c.fn.load;
-//     c.fn.extend({
-//         load: function(a, b, d) {
-//             if (typeof a !== "string") return zb.call(this, a);
-//             else if (!this.length) return this;
-//             var f = a.indexOf(" ");
-//             if (f >= 0) {
-//                 var e = a.slice(f, a.length);
-//                 a = a.slice(0, f)
-//             }
-//             f = "GET";
-//             if (b) if (c.isFunction(b)) {
-//                 d = b;
-//                 b = null
-//             } else if (typeof b === "object") {
-//                 b = c.param(b, c.ajaxSettings.traditional);
-//                 f = "POST"
-//             }
-//             var j = this;
-//             c.ajax({
-//                 url: a,
-//                 type: f,
-//                 dataType: "html",
-//                 data: b,
-//                 complete: function(i, o) {
-//                     if (o === "success" || o === "notmodified") j.html(e ? c("<div />").append(i.responseText.replace(tb, "")).find(e) : i.responseText);
-//                     d && j.each(d, [i.responseText, o, i])
-//                 }
-//             });
-//             return this
-//         }
-//     });
-//     c.extend({
-//         get: function(a, b, d, f) {
-//             if (c.isFunction(b)) {
-//                 f = f || d;
-//                 d = b;
-//                 b = null
-//             }
-//             return c.ajax({
-//                 type: "GET",
-//                 url: a,
-//                 data: b,
-//                 success: d,
-//                 dataType: f
-//             })
-//         },
-//         getJSON: function(a, b, d) {
-//             return c.get(a, b, d, "json")
-//         },
-//         ajaxSettings: {
-//             url: location.href,
-//             global: true,
-//             type: "GET",
-//             contentType: "application/x-www-form-urlencoded",
-//             processData: true,
-//             async: true,
-//             xhr: A.XMLHttpRequest && (A.location.protocol !== "file:" || !A.ActiveXObject) ?
-//             function() {
-//                 return new A.XMLHttpRequest
-//             }: function() {
-//                 try {
-//                     return new A.ActiveXObject("Microsoft.XMLHTTP")
-//                 } catch(a) {}
-//             },
-//             accepts: {
-//                 xml: "application/xml, text/xml",
-//                 html: "text/html",
-//                 script: "text/javascript, application/javascript",
-//                 json: "application/json, text/javascript",
-//                 text: "text/plain",
-//                 _default: "*/*"
-//             }
-//         },
-//         ajax: function(a) {
-//             function b() {
-//                 e.success && e.success.call(k, o, i, x);
-//                 e.global && f("ajaxSuccess", [x, e])
-//             }
-//             function d() {
-//                 e.complete && e.complete.call(k, x, i);
-//                 e.global && f("ajaxComplete", [x, e]);
-//                 e.global && !--c.active && c.event.trigger("ajaxStop")
-//             }
-//             function f(q, p) { (e.context ? c(e.context) : c.event).trigger(q, p)
-//             }
-//             var e = c.extend(true, {},
-//             c.ajaxSettings, a),
-//             j,
-//             i,
-//             o,
-//             k = a && a.context || e,
-//             n = e.type.toUpperCase();
-//             if (e.data && e.processData && typeof e.data !== "string") e.data = c.param(e.data, e.traditional);
-//             if (e.dataType === "jsonp") {
-//                 if (n === "GET") N.test(e.url) || (e.url += (ka.test(e.url) ? "&": "?") + (e.jsonp || "callback") + "=?");
-//                 else if (!e.data || !N.test(e.data)) e.data = (e.data ? e.data + "&": "") + (e.jsonp || "callback") + "=?";
-//                 e.dataType = "json"
-//             }
-//             if (e.dataType === "json" && (e.data && N.test(e.data) || N.test(e.url))) {
-//                 j = e.jsonpCallback || "jsonp" + sb++;
-//                 if (e.data) e.data = (e.data + "").replace(N, "=" + j + "$1");
-//                 e.url = e.url.replace(N, "=" + j + "$1");
-//                 e.dataType = "script";
-//                 A[j] = A[j] ||
-//                 function(q) {
-//                     o = q;
-//                     b();
-//                     d();
-//                     A[j] = w;
-//                     try {
-//                         delete A[j]
-//                     } catch(p) {}
-//                     z && z.removeChild(C)
-//                 };
-//             }
-//             if (e.dataType === "script" && e.cache === null) e.cache = false;
-//             if (e.cache === false && n === "GET") {
-//                 var r = J(),
-//                 u = e.url.replace(wb, "$1_=" + r + "$2");
-//                 e.url = u + (u === e.url ? (ka.test(e.url) ? "&": "?") + "_=" + r: "")
-//             }
-//             if (e.data && n === "GET") e.url += (ka.test(e.url) ? "&": "?") + e.data;
-//             e.global && !c.active++&&c.event.trigger("ajaxStart");
-//             r = (r = xb.exec(e.url)) && (r[1] && r[1] !== location.protocol || r[2] !== location.host);
-//             if (e.dataType === "script" && n === "GET") {
-//                 var z = s.getElementsByTagName("head")[0] || s.documentElement,
-//                 C = s.createElement("script");
-//                 C.src = e.url;
-//                 if (e.scriptCharset) C.charset = e.scriptCharset;
-//                 if (!j) {
-//                     var B = false;
-//                     C.onload = C.onreadystatechange = function() {
-//                         if (!B && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete")) {
-//                             B = true;
-//                             b();
-//                             d();
-//                             C.onload = C.onreadystatechange = null;
-//                             z && C.parentNode && z.removeChild(C)
-//                         }
-//                     }
-//                 }
-//                 z.insertBefore(C, z.firstChild);
-//                 return w;
-//             }
-//             var E = false,
-//             x = e.xhr();
-//             if (x) {
-//                 e.username ? x.open(n, e.url, e.async, e.username, e.password) : x.open(n, e.url, e.async);
-//                 try {
-//                     if (e.data || a && a.contentType) x.setRequestHeader("Content-Type", e.contentType);
-//                     if (e.ifModified) {
-//                         c.lastModified[e.url] && x.setRequestHeader("If-Modified-Since", c.lastModified[e.url]);
-//                         c.etag[e.url] && x.setRequestHeader("If-None-Match", c.etag[e.url])
-//                     }
-//                     r || x.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-//                     x.setRequestHeader("Accept", e.dataType && e.accepts[e.dataType] ? e.accepts[e.dataType] + ", */*": e.accepts._default)
-//                 } catch(ga) {}
-//                 if (e.beforeSend && e.beforeSend.call(k, x, e) === false) {
-//                     e.global && !--c.active && c.event.trigger("ajaxStop");
-//                     x.abort();
-//                     return false;
-//                 }
-//                 e.global && f("ajaxSend", [x, e]);
-//                 var g = x.onreadystatechange = function(q) {
-//                     if (!x || x.readyState === 0 || q === "abort") {
-//                         E || d();
-//                         E = true;
-//                         if (x) x.onreadystatechange = c.noop
-//                     } else if (!E && x && (x.readyState === 4 || q === "timeout")) {
-//                         E = true;
-//                         x.onreadystatechange = c.noop;
-//                         i = q === "timeout" ? "timeout": !c.httpSuccess(x) ? "error": e.ifModified && c.httpNotModified(x, e.url) ? "notmodified": "success";
-//                         var p;
-//                         if (i === "success") try {
-//                             o = c.httpData(x, e.dataType, e)
-//                         } catch(v) {
-//                             i = "parsererror";
-//                             p = v
-//                         }
-//                         if (i === "success" || i === "notmodified") j || b();
-//                         else c.handleError(e, x, i, p);
-//                         d();
-//                         q === "timeout" && x.abort();
-//                         if (e.async) x = null
-//                     }
-//                 };
-//                 try {
-//                     var h = x.abort;
-//                     x.abort = function() {
-//                         x && h.call(x);
-//                         g("abort")
-//                     };
-//                 } catch(l) {}
-//                 e.async && e.timeout > 0 && setTimeout(function() {
-//                     x && !E && g("timeout")
-//                 },
-//                 e.timeout);
-//                 try {
-//                     x.send(n === "POST" || n === "PUT" || n === "DELETE" ? e.data: null)
-//                 } catch(m) {
-//                     c.handleError(e, x, null, m);
-//                     d()
-//                 }
-//                 e.async || g();
-//                 return x;
-//             }
-//         },
-// 		handleError: function(a, b, d, f) {
-// 			if (a.error) a.error.call(a.context || a, b, d, f);
-// 			if (a.global)(a.context ? c(a.context) : c.event).trigger("ajaxError", [b, a, f])
-// 		},
-// 		active: 0,
-// 		httpSuccess: function(a) {
-// 			try {
-// 				return ! a.status && location.protocol === "file:" || a.status >= 200 && a.status < 300 || a.status === 304 || a.status === 1223 || a.status === 0
-// 			} catch(b) {}
-// 			return false
-// 		},
-// 		httpNotModified: function(a, b) {
-// 			var d = a.getResponseHeader("Last-Modified"),
-// 			f = a.getResponseHeader("Etag");
-// 			if (d) c.lastModified[b] = d;
-// 			if (f) c.etag[b] = f;
-// 			return a.status === 304 || a.status === 0
-// 		},
-// 		httpData: function(a, b, d) {
-// 			var f = a.getResponseHeader("content-type") || "",
-// 			e = b === "xml" || !b && f.indexOf("xml") >= 0;
-// 			a = e ? a.responseXML: a.responseText;
-// 			e && a.documentElement.nodeName === "parsererror" && c.error("parsererror");
-// 			if (d && d.dataFilter) a = d.dataFilter(a, b);
-// 			if (typeof a === "string") if (b === "json" || !b && f.indexOf("json") >= 0) a = c.parseJSON(a);
-// 			else if (b === "script" || !b && f.indexOf("javascript") >= 0) c.globalEval(a);
-// 			return a
-// 		},
-//         param: function(a, b) {
-//             function d(i, o) {
-//                 if (c.isArray(o)) c.each(o,
-//                 function(k, n) {
-//                     b || /\[\]$/.test(i) ? f(i, n) : d(i + "[" + (typeof n === "object" || c.isArray(n) ? k: "") + "]", n)
-//                 });
-//                 else ! b && o != null && typeof o === "object" ? c.each(o,
-//                 function(k, n) {
-//                     d(i + "[" + k + "]", n)
-//                 }) : f(i, o)
-//             }
-//             function f(i, o) {
-//                 o = c.isFunction(o) ? o() : o;
-//                 e[e.length] = encodeURIComponent(i) + "=" + encodeURIComponent(o)
-//             }
-//             var e = [];
-//             if (b === w) b = c.ajaxSettings.traditional;
-//             if (c.isArray(a) || a.jquery) c.each(a,
-//             function() {
-//                 f(this.name, this.value)
-//             });
-//             else for (var j in a) d(j, a[j]);
-//             return e.join("&").replace(yb, "+")
-//         },
-// 		noop: function() {}
-//     });
-    
-// 	var util =function(){};
-// 	util.isChinese = function(v_card){
-// 		var reg = /^[\u4E00-\u9FA5]+$/;
-// 		if (!reg.test(v_card)) {
-// 			return false;
-// 		}
-// 		return true;
-// 	}
-// 	util.isUsrId = function(uid){
-// 		var reg = /^[0-9]{11}$/;
-// 		if (!reg.test(uid)) {
-// 			return false;
-// 		}
-// 		return true;
-// 	}
-// 	util.isEmail = function(email) {
-// 		var reg = /^[^@]+@[^@]+$/;
-// 		if (!reg.test(email)) {
-// 			return false;
-// 		}
-// 		return true;
-// 	}
-// })("http://www.seedui.com", window);
+;(function ($, window) {
+    'use strict';
+    var guid = 0,
+        ignoredKeyCode = [9, 13, 17, 19, 20, 27, 33, 34, 35, 36, 37, 39, 44, 92, 113, 114, 115, 118, 119, 120, 122, 123, 144, 145],
+        allowOptions = [
+            'source',
+            'empty',
+            'limit',
+            'cache',
+            'focusOpen',
+            'selectFirst',
+            'changeWhenSelect',
+            'highlightMatches',
+            'ignoredKeyCode',
+            'customLabel',
+            'customValue',
+            'template',
+            'offset',
+            'combine',
+            'callback',
+            'minLength',
+            'delay'
+        ],
+        userAgent = (window.navigator.userAgent||window.navigator.vendor||window.opera),
+        isFirefox = /Firefox/i.test(userAgent),
+        isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(userAgent),
+        isFirefoxMobile = (isFirefox && isMobile),
+        $body = null,
+        delayTimeout = null,
+        localStorageKey = 'seedUISCache',
+        supportLocalStorage = (function () {
+            var supported = typeof window.localStorage !== 'undefined';
 
-(function(basePath, A, w) {
+            if (supported) {
+                try {
+                    localStorage.setItem('seedUIS', 'seedUIS');
+                    localStorage.removeItem('seedUIS');
+                } catch (e) {
+                    supported = false;
+                }
+            }
+
+            return supported;
+        })();
+
+    
+    var options = {
+        source: null,
+        asLocal: false,
+        empty: true,
+        limit: 10,
+        minLength: 0,
+        delay: 0,
+        customClass: [],
+        cache: true,
+        focusOpen: true,
+        hint: false,
+        selectFirst: false,
+        changeWhenSelect: true,
+        highlightMatches: false,
+        ignoredKeyCode: [],
+        customLabel: false,
+        customValue: false,
+        template: false,
+        offset: false,
+        combine: $.noop,
+        callback: $.noop
+    };
+
+    var publics = {
+        
+        defaults: function (opts) {
+            options = $.extend(options, opts || {});
+
+            return (typeof this === 'object') ? $(this) : true;
+        },
+
+        
+        option: function (properties) {
+            return $(this).each(function (i, input) {
+                var data = $(input).next('.seedUIS').data('seedUIS');
+
+                for (var property in properties) {
+                    if ($.inArray(property, allowOptions) !== -1) {
+                        data[property] = properties[property];
+                    }
+                }
+            });
+        },
+
+        
+        open: function () {
+            return $(this).each(function (i, input) {
+                var data = $(input).next('.seedUIS').data('seedUIS');
+
+                if (data) {
+                    _open(null, data);
+                }
+            });
+        },
+
+        
+        close: function () {
+            return $(this).each(function (i, input) {
+                var data = $(input).next('.seedUIS').data('seedUIS');
+
+                if (data) {
+                    _close(null, data);
+                }
+            });
+        },
+
+        
+        clearCache: function () {
+            _deleteCache();
+        },
+
+        
+        destroy: function () {
+            return $(this).each(function (i, input) {
+                var data = $(input).next('.seedUIS').data('seedUIS');
+
+                if (data) {
+                    
+                    if (data.jqxhr) {
+                        data.jqxhr.abort();
+                    }
+
+                    
+                    if (data.$seedUIS.hasClass('open')) {
+                        data.$seedUIS.find('.seedUIS-selected')
+                                           .trigger('click.seedUIS');
+                    }
+
+                    
+                    if (!data.originalAutocomplete) {
+                        data.$node.removeAttr('autocomplete');
+                    } else {
+                        data.$node.attr('autocomplete', data.originalAutocomplete);
+                    }
+
+                    
+                    data.$node.off('.seedUIS')
+                               .removeClass('seedUIS-node');
+                    data.$seedUIS.off('.seedUIS')
+                                         .remove();
+                }
+            });
+        }
+    };
+
+    
+    function _init(opts) {
+        
+        opts = $.extend({}, options, opts || {});
+
+        
+        if ($body === null) {
+            $body = $('body');
+        }
+
+        
+        var $items = $(this);
+        for (var i = 0, count = $items.length; i < count; i++) {
+            _build($items.eq(i), opts);
+        }
+
+        return $items;
+    }
+
+    
+    function _build($node, opts) {
+        if (!$node.hasClass('seedUIS-node')) {
+            
+            opts = $.extend({}, opts, $node.data('seedUIS-options'));
+
+            
+            if (typeof opts.source === 'string' && (opts.source.slice(-5) === '.json' || opts.asLocal === true)) {
+                $.ajax({
+                    url: opts.source,
+                    type: 'GET',
+                    dataType: 'json',
+                    async: false
+                }).done(function (response) {
+                    opts.source = response;
+                });
+            }
+
+            var html = '<div class="seedUIS ' + opts.customClass.join(' ') + '" id="seedUIS-' + (guid + 1) + '">';
+
+            if (opts.hint) {
+                html += '<div class="seedUIS-hint"></div>';
+            }
+
+            html += '<ul class="seedUIS-list"></ul>';
+            html += '</div>';
+
+            $node.addClass('seedUIS-node')
+                 .after(html);
+
+            
+            var $seedUIS = $node.next('.seedUIS').eq(0);
+
+            
+            var originalAutocomplete = $node.attr('autocomplete');
+            $node.attr('autocomplete', 'off');
+
+            
+            var data = $.extend({
+                $node: $node,
+                $seedUIS: $seedUIS,
+                $selected: null,
+                $list: null,
+                index: -1,
+                hintText: false,
+                source: false,
+                jqxhr: false,
+                response: null,
+                focused: false,
+                query: '',
+                originalAutocomplete: originalAutocomplete,
+                guid: guid++
+            }, opts);
+
+            
+            data.$seedUIS.on('mousedown.seedUIS', '.seedUIS-item', data, _select)
+                               .data('seedUIS', data);
+
+            
+            data.$node.on('keyup.seedUIS', data, _onKeyup)
+                      .on('keydown.seedUIS', data, _onKeydown)
+                      .on('focus.seedUIS', data, _onFocus)
+                      .on('blur.seedUIS', data, _onBlur)
+                      .on('mousedown.seedUIS', data, _onMousedown);
+        }
+    }
+
+    
+    function _search(query, source, data) {
+        var response = [];
+
+        query = query.toUpperCase();
+
+        if (source.length) {
+            for (var i = 0; i < 2; i++) {
+                for (var item in source) {
+                    if (response.length < data.limit) {
+                        var label = (data.customLabel && source[item][data.customLabel]) ? source[item][data.customLabel] : source[item].label;
+
+                        switch (i) {
+                        case 0:
+                            if (label.toUpperCase().search(query) === 0) {
+                                response.push(source[item]);
+                                delete source[item];
+                            }
+                            break;
+
+                        case 1:
+                            if (label.toUpperCase().search(query) !== -1) {
+                                response.push(source[item]);
+                                delete source[item];
+                            }
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        return response;
+    }
+
+    
+    function _launch(data) {
+        
+        clearTimeout(delayTimeout);
+
+        data.query = $.trim(data.$node.val());
+
+        if ((!data.empty && data.query.length === 0) || (data.minLength && (data.query.length < data.minLength))) {
+            _clear(data);
+            return;
+        }
+
+        if (data.delay) {
+            
+            delayTimeout = setTimeout(function () { _xhr(data); }, data.delay);
+        } else {
+            _xhr(data);
+        }
+    }
+
+    
+    function _xhr(data) {
+        if (typeof data.source === 'object') {
+            _clear(data);
+
+            
+            var search = _search(data.query, _clone(data.source), data);
+
+            if (search.length) {
+                _response(search, data);
+            }
+        } else {
+            if (data.jqxhr) {
+                data.jqxhr.abort();
+            }
+
+            var ajaxData = $.extend({
+                limit: data.limit,
+                query: data.query
+            }, data.combine());
+
+            data.jqxhr = $.ajax({
+                url:        data.source,
+                dataType:   'json',
+                data:       ajaxData,
+                beforeSend: function (xhr) {
+                    data.$seedUIS.addClass('seedUIS-ajax');
+                    _clear(data);
+
+                    if (data.cache) {
+                        var stored = _getCache(this.url);
+
+                        if (stored) {
+                            xhr.abort();
+                            _response(stored, data);
+                        }
+                    }
+                }
+            })
+            .done(function (response) {
+                
+                if (data.offset) {
+                    response = _grab(response, data.offset);
+                }
+                if (data.cache) {
+                    _setCache(this.url, response);
+                }
+
+                _response(response, data);
+            })
+            .always(function () {
+                data.$seedUIS.removeClass('seedUIS-ajax');
+            });
+        }
+    }
+
+    
+    function _clear(data) {
+        
+        data.response = null;
+        data.$list = null;
+        data.$selected = null;
+        data.index = 0;
+        data.$seedUIS.find('.seedUIS-list').empty();
+        data.$seedUIS.find('.seedUIS-hint').removeClass('seedUIS-hint-show').empty();
+        data.hintText = false;
+
+        _close(null, data);
+    }
+
+    
+    function _response(response, data) {
+        _buildList(response, data);
+
+        if (data.$seedUIS.hasClass('seedUIS-focus')) {
+            _open(null, data);
+        }
+    }
+
+    
+    function _buildList(list, data) {
+        var menu = '';
+        var path = './images/logos/'
+
+        for (var item = 0, count = list.length; item < count; item++) {
+            var classes = ['seedUIS-item'],
+                highlightReg = new RegExp(data.query, 'gi');
+
+            if (data.selectFirst && item === 0 && !data.changeWhenSelect) {
+                classes.push('seedUIS-item-selected');
+            }
+
+            var label = (data.customLabel && list[item][data.customLabel]) ? list[item][data.customLabel] : list[item].label,
+                clear = label;
+
+            label = data.highlightMatches ? label.replace(highlightReg, '<strong>$&</strong>') : label;
+
+            var value = (data.customValue && list[item][data.customValue]) ? list[item][data.customValue] : list[item].value;
+
+            var site_name = list[item].site_name;
+            var site_url = list[item].site_url;
+            var site_img = path + list[item].site_img;
+            var color = 'rgb' + list[item].rgb;
+            
+            if (data.template) {
+                var template = data.template.replace(/({{ label }})/gi, label);
+
+                for (var property in list[item]) {
+                    if (list[item].hasOwnProperty(property)) {
+                        var regex = new RegExp('{{ ' + property + ' }}', 'gi');
+
+                        template = template.replace(regex, list[item][property]);
+                    }
+                }
+
+                label = template;
+            }
+
+            if (value) {
+                
+                menu += '<li data-value="' + site_name + '" data-label="' + site_name + '" class="' + classes.join(' ') + '" style="color:' + color + ' !important;" data-url="' + site_url + '"><p class="site_name">' + site_name + '</p><img class="site_img" src="' + site_img + '"></li>';
+            } else {
+                
+                menu += '<li data-label="' + site_name + '" class="' + classes.join(' ') + '" style="color:' + color + ' !important;" data-url="' + site_url + '"><p class="site_name">' + site_name + '</p><img class="site_img" src="' + site_img + '"></li>';
+            }
+        }
+
+        
+        if (list.length && data.hint) {
+            var hint = ( list[0].label.substr(0, data.query.length).toUpperCase() === data.query.toUpperCase() ) ? list[0].label : false;
+
+            if (hint && (data.query !== list[0].label)) {
+                var hintReg = new RegExp(data.query, 'i');
+                var hintText = hint.replace(hintReg, '<span>' + data.query + '</span>');
+
+                data.$seedUIS.find('.seedUIS-hint').addClass('seedUIS-hint-show').html(hintText);
+                data.hintText = hintText;
+            }
+        }
+
+        
+        data.response = list;
+        data.$seedUIS.find('.seedUIS-list').html(menu);
+        data.$selected = (data.$seedUIS.find('.seedUIS-item-selected').length) ? data.$seedUIS.find('.seedUIS-item-selected') : null;
+        data.$list = (list.length) ? data.$seedUIS.find('.seedUIS-item') : null;
+        data.index = data.$selected ? data.$list.index(data.$selected) : -1;
+        data.$seedUIS.find('.seedUIS-item').each(function (i, j) {
+            $(j).data(data.response[i]);
+        });
+    }
+
+    
+    function _onKeyup(e) {
+        var data = e.data,
+            code = e.keyCode ? e.keyCode : e.which;
+
+        if ( (code === 40 || code === 38) && data.$seedUIS.hasClass('seedUIS-show') ) {
+            
+            var len = data.$list.length,
+                next,
+                prev;
+
+            if (len) {
+                
+                if (len > 1) {
+                    if (data.index === len - 1) {
+                        next = data.changeWhenSelect ? -1 : 0;
+                        prev = data.index - 1;
+                    } else if (data.index === 0) {
+                        next = data.index + 1;
+                        prev = data.changeWhenSelect ? -1 : len - 1;
+                    } else if (data.index === -1) {
+                        next = 0;
+                        prev = len - 1;
+                    } else {
+                        next = data.index + 1;
+                        prev = data.index - 1;
+                    }
+                } else if (data.index === -1) {
+                    next = 0;
+                    prev = 0;
+                } else {
+                    prev = -1;
+                    next = -1;
+                }
+
+                data.index = (code === 40) ? next : prev;
+
+                
+                data.$list.removeClass('seedUIS-item-selected');
+
+                if (data.index !== -1) {
+                    data.$list.eq(data.index).addClass('seedUIS-item-selected');
+                }
+
+                data.$selected = data.$seedUIS.find('.seedUIS-item-selected').length ? data.$seedUIS.find('.seedUIS-item-selected') : null;
+
+                if (data.changeWhenSelect) {
+                    _setValue(data);
+                }
+            }
+        } else if ($.inArray(code, ignoredKeyCode) === -1 && $.inArray(code, data.ignoredKeyCode) === -1) {
+            
+            _launch(data);
+        }
+    }
+
+    
+    function _onKeydown(e) {
+        var data = e.data,
+            code = e.keyCode ? e.keyCode : e.which;
+
+        if (code === 40 || code === 38 ) {
+            e.preventDefault();
+            e.stopPropagation();
+        } else if (code === 39) {
+            
+            if (data.hint && data.hintText && data.$seedUIS.find('.seedUIS-hint').hasClass('seedUIS-hint-show')) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                var hintOrigin = data.$seedUIS.find('.seedUIS-item').length ? data.$seedUIS.find('.seedUIS-item').eq(0).attr('data-label') : false;
+
+                if (hintOrigin) {
+                    data.query = hintOrigin;
+                    _setHint(data);
+                }
+            }
+        } else if (code === 13) {
+            if (data.$seedUIS.hasClass('seedUIS-show') && data.$selected) {
+                _select(e);
+            } else if (data.$node.attr('data-url')) {
+                window.open(data.$node.attr('data-url'));
+                // data.$node.removeAttr('data-url').val('');
+            } else if (data.$node.length > 0 && !data.$node.attr('data-url') && $('.seedUIS').hasClass('seedUIS-closed')) {
+                window.open('https://www.baidu.com/s?ie=utf-8&wd=' + data.$node.val());
+                // data.$node.val('');
+            }
+        }
+    }
+
+    
+    function _onFocus(e, internal) {
+        if (!internal) {
+            var data = e.data;
+
+            data.$seedUIS.addClass('seedUIS-focus');
+
+            if (!data.$node.prop('disabled') && !data.$seedUIS.hasClass('seedUIS-show')) {
+                if (data.focusOpen) {
+                    _launch(data);
+                    data.focused = true;
+
+                    setTimeout(function () {
+                        data.focused = false;
+                    }, 500);
+                }
+            }
+        }
+    }
+
+    
+    function _onBlur(e, internal) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        var data = e.data;
+
+        if (!internal) {
+            data.$seedUIS.removeClass('seedUIS-focus');
+            _close(e);
+        }
+    }
+
+    
+    function _onMousedown(e) {
+        
+        if (e.type === 'mousedown' && $.inArray(e.which, [2, 3]) !== -1) { return; }
+
+        var data = e.data;
+
+        if (data.$list && !data.focused) {
+            if (!data.$node.is(':disabled')) {
+                if (isMobile && !isFirefoxMobile) {
+                    var el = data.$select[0];
+
+                    if (window.document.createEvent) { 
+                        var evt = window.document.createEvent('MouseEvents');
+                        evt.initMouseEvent('mousedown', false, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+                        el.dispatchEvent(evt);
+                    } else if (el.fireEvent) { 
+                        el.fireEvent('onmousedown');
+                    }
+                } else {
+                    
+                    if (data.$seedUIS.hasClass('seedUIS-closed')) {
+                        _open(e);
+                    } else if (data.$seedUIS.hasClass('seedUIS-show')) {
+                        _close(e);
+                    }
+                }
+            }
+        }
+    }
+
+    
+    function _open(e, instanceData) {
+        var data = e ? e.data : instanceData;
+
+        if (!data.$node.prop('disabled') && !data.$seedUIS.hasClass('seedUIS-show') && data.$list && data.$list.length) {
+            data.$seedUIS.removeClass('seedUIS-closed').addClass('seedUIS-show');
+            $body.on('click.seedUIS-' + data.guid, ':not(.seedUIS-item)', data, _closeHelper);
+        }
+    }
+
+    
+    function _closeHelper(e) {
+        if ( $(e.target).hasClass('seedUIS-node') ) {
+            return;
+        }
+
+        if ($(e.currentTarget).parents('.seedUIS').length === 0) {
+            _close(e);
+        }
+    }
+
+    
+    function _close(e, instanceData) {
+        var data = e ? e.data : instanceData;
+
+        if (data.$seedUIS.hasClass('seedUIS-show')) {
+            data.$seedUIS.removeClass('seedUIS-show').addClass('seedUIS-closed');
+            $body.off('.seedUIS-' + data.guid);
+        }
+    }
+
+    
+    function _select(e) {
+        
+        if (e.type === 'mousedown' && $.inArray(e.which, [2, 3]) !== -1) {
+            return;
+        }
+
+        var data = e.data;
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (e.type === 'mousedown' && $(this).length) {
+            data.$selected = $(this);
+            data.index = data.$list.index(data.$selected);
+        }
+
+        if (!data.$node.prop('disabled')) {
+            _close(e);
+            _update(data);
+
+            if (e.type === 'click') {
+                data.$node.trigger('focus', [ true ]);
+                console.log('node' + data.$node);
+                console.log('selected' + data.$selected);
+            } else if (e.type === 'keydown') {
+                if (data.$node.attr('data-url')) {
+                    
+                    
+                } else {
+                    
+                }
+            }
+        }
+    }
+
+    
+    function _setHint(data) {
+        _setValue(data);
+        _handleChange(data);
+        _launch(data);
+    }
+
+    
+    function _setValue(data) {
+        if (data.$selected) {
+            if (data.hintText && data.$seedUIS.find('.seedUIS-hint').hasClass('seedUIS-hint-show')) {
+                data.$seedUIS.find('.seedUIS-hint').removeClass('seedUIS-hint-show');
+            }
+
+            data.$node.val(data.$selected.attr('data-value') ? data.$selected.attr('data-value') : data.$selected.attr('data-label'));
+            data.$node.attr('data-url',data.$selected.attr('data-url'));
+        } else {
+            if (data.hintText && !data.$seedUIS.find('.seedUIS-hint').hasClass('seedUIS-hint-show')) {
+                data.$seedUIS.find('.seedUIS-hint').addClass('seedUIS-hint-show');
+            }
+
+            data.$node.val(data.query);
+            data.$node.removeAttr('data-url');
+        }
+    }
+
+    
+    function _update(data) {
+        _setValue(data);
+        _handleChange(data);
+        _clear(data);
+    }
+
+    
+    function _handleChange(data) {
+        data.callback.call(data.$seedUIS, data.$node.val(), data.index, data.response[data.index]);
+        data.$node.trigger('change');
+    }
+
+    
+    function _grab(response, offset) {
+        offset = offset.split('.');
+
+        while (response && offset.length) {
+            response = response[offset.shift()];
+        }
+
+        return response;
+    }
+
+    
+    function _setCache(url, data) {
+        if (!supportLocalStorage) {
+            return;
+        }
+
+        if (url && data) {
+            cache[url] = {
+                value: data
+            };
+
+            
+            try {
+                localStorage.setItem(localStorageKey, JSON.stringify(cache));
+            } catch (e) {
+                var code = e.code || e.number || e.message;
+
+                if (code === 22) {
+                    _deleteCache();
+                } else {
+                    throw(e);
+                }
+            }
+        }
+    }
+
+    
+    function _getCache(url) {
+        if (!url) {
+            return;
+        }
+
+        var response = (cache[url] && cache[url].value) ? cache[url].value : false;
+
+        return response;
+    }
+
+    
+    function _loadCache() {
+        if (!supportLocalStorage) {
+            return;
+        }
+
+        return JSON.parse(localStorage.getItem(localStorageKey) || '{}');
+    }
+
+    
+    function _deleteCache() {
+        try {
+            localStorage.removeItem(localStorageKey);
+            cache = _loadCache();
+        } catch (e) {
+            throw(e);
+        }
+    }
+
+    
+    function _clone(obj) {
+        var copy;
+
+        if (null === obj || 'object' !== typeof obj) {
+            return obj;
+        }
+
+        copy = obj.constructor();
+
+        for (var attr in obj) {
+            if (obj.hasOwnProperty(attr)) {
+                copy[attr] = obj[attr];
+            }
+        }
+
+        return copy;
+    }
+
+    
+    var cache = _loadCache();
+
+    $.fn.seedUIS = function (method) {
+        if (publics[method]) {
+            return publics[method].apply(this, Array.prototype.slice.call(arguments, 1));
+        } else if (typeof method === 'object' || !method) {
+            return _init.apply(this, arguments);
+        }
+        return this;
+    };
+
+    $.seedUIS = function (method) {
+        if (method === 'defaults') {
+            publics.defaults.apply(this, Array.prototype.slice.call(arguments, 1));
+        } else if (method === 'clearCache') {
+            publics.clearCache.apply(this, null);
+        }
+    };
+})(jQuery, window);
+
+
+(function(basePath, w) {
     function resize() {
     	var deviceWidth = document.documentElement.clientWidth;  
         if(deviceWidth > 640) deviceWidth = 640;  
@@ -530,15 +823,22 @@
     function event() {
     	var $s_input = $('#sb_form_q');
     	var $s_enter = $('#sb_form_go');
+
     	$s_enter.click(function(e){
 	        e.preventDefault();
 	        if ($s_input.attr('data-url')) {
 	        	$s_input.removeAttr('data-url');
                 window.open($s_input.attr('data-url'));
-	        } else if ($s_input.length > 0 && !$s_input.attr('data-url') && $('.autocompleter').hasClass('autocompleter-closed')) {
+	        } else if ($s_input.length > 0 && !$s_input.attr('data-url') && $('.seedUIS').hasClass('seedUIS-closed')) {
                 window.open('https://www.baidu.com/s?ie=utf-8&wd=' + $s_input.val());
                 $s_input.val('');
             }
+    	});
+
+    	$('.seedUIS-list').delegate('li', 'click', function(){
+    		alert();
+    		$(this).addClass('.seedUIS-item-selected');
+    		$s_input.attr('data-url', $(this).attr('data-url'));
     	});
     };
 
