@@ -147,7 +147,7 @@ $('.class-lists .lists-content').html(classLists);
 var teacherLists = '';
 var teacherTpl = simpleTpl();
 teacherTpl._('<div class="lists-content-card col-lg-2-4 col-md-3 col-sm-3 col-xs-6">')
-	._('<a target="_blank" class="teacher-card g-shadow" href="">')
+	._('<a target="_blank" class="teacher-card g-shadow" href="lecturerdetail.html?from=index">')
 		._('<div class="teacher-card-cover" style="background:url(/static/images/avatar/avatar2.jpg) center center no-repeat;background-size:cover;"></div>')
 		._('<div class="teacher-card-content">')
 			._('<h3 class="teacher-card-name ui-nowrap-flex">教师姓名</h3>')

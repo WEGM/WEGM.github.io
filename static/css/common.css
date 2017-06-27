@@ -435,9 +435,9 @@ a.news-close {
 	color: #666;
 	/*margin: 0 17px 0 16px;*/
 	border-radius: 5px;
+	background: #FFF;
 }
 .lists-content-card {
-	background: #FFF;
 	padding: 0 15px;
 	margin-bottom: 30px;
 }
@@ -948,6 +948,36 @@ footer .rightArea a.icons-qzone {
 .elevator .elevator-top:hover span,
 .elevator .elevator-weixin:hover span {
     display: inline-block;
+}
+
+/* 分享图标 */
+.share-content .share {
+    display: inline-block;
+    float: none;
+    padding: 0;
+    font-size: 24px;
+    background: rgba(7,17,27,.4);
+    margin: 0 7px;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,.4);
+    color: rgba(255,255,255,.8);
+}
+.share-content .share:hover {
+    color: #fff;
+    opacity: 1;
+}
+.icon-share-weichat:before {
+    content: "\e646";
+}
+.icon-share-qq:before {
+    content: "\e647";
+}
+.icon-share-weibo:before {
+    content: "\e645";
 }
 
 /* 适配 */
