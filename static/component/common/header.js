@@ -1,69 +1,128 @@
-$('#main').before('<header class="headertop shadow"><div class="container"><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 logotop"><a class="header-logo db" href="index.html">腾讯互动娱乐</a><div class="header-nav"><a href="course.html">课程</a><a href="lecturer.html">名师</a><a href="">广场</a></div></div><div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fl right"><div id="header-user" class="fl header-user right"><div class="header-unenter none1"><a id="header-register" href="javascript:;">注册</a><span class="header-split">|</span><a id="header-login" href="javascript:;">登录</a></div><div class="header-enter none"><div id="header-msg" class="header-msg fl"><a title="我的消息"><i class="msg_count hidden"></i></a><div class="header-msg-ct none"><span class="header-tc-ct-bg"></span><div class="news-header"><div class="news-title clr"><span class="news-title-ctx">消息</span><a data-click="{&quot;act&quot;:&quot;msg_close_all&quot;}" class="news-title-op" href="javascript:;">全部标记为已读</a></div><ul class="news-list" id="news-list"><li class="news-item clr hover"><a class="news-ctx-link  blank_to" target="_blank" href="" title="您有 24 条新回复">课程java出新教程了，快去围观学习吧！</a><a data-click="{&quot;act&quot;:&quot;msg_close&quot;}" href="javascript:;" data-id="-1" data-appid="11" class="news-close"></a></li></ul><div class="news-bottom clearfix"><a data-click="{&quot;act&quot;:&quot;msg_set&quot;}" class="news-bottom-conf" href="/my/allconf/#newsconf"></a><a data-click="{&quot;act&quot;:&quot;msg_click&quot;}" class="news-more" href="/msg/messages/list/">查看全部消息</a></div></div></div></div><div id="header-avatar" class="header-avatar fl"><a href="/dashboard/"><img src="http://q.qlogo.cn/qqapp/101148549/47380775035342D67C08115A20D35A53/40"></a></div></div></div><div id="header_login_register" class="fl cf none"></div><div class="header-mobile fl right"><a href="mobile.html" title="App下载"></a></div><form class="header-search fl right" id="header-search" method="get" action="search.html"><div class="search-nav fl"><a href="javascript:;" class="tabs-toggle tabs-toggle-hook tabs-toggle-open" hidefocus="true"><i class="arrow db">收起</i><span class="tab-curr">全站</span></a><div class="right tabs tabs-hook"><a class="tab tab-hook s-bg20 g-fc5 g-fc5h curr curr-hook" data-tab="web" href="http://www.hao123.com" hidefocus="true">全站</a><a class="tab tab-hook g-fc0" data-tab="music" href="http://music.baidu.com" hidefocus="true">课程</a><a class="tab tab-hook g-fc0" data-tab="video" href="http://v.baidu.com" hidefocus="true">文章</a><a class="tab tab-hook g-fc0" data-tab="image" href="http://image.baidu.com" hidefocus="true">教师</a></div></div><input class="fl" type="search" name="query" placeholder="请输入您要查找的内容" value="" autocomplete="off" autofocus="" tabindex="0" autocorrect="off" autocapitalize="off" spellcheck="false"><button class="header-submit fl"><i class="icon-search"></i></button><div class="search_header_suggestion" style="display: none;"></div></form></div></div></header>');
+var header = '';
+var header = simpleTpl();
+header._('<header class="headertop shadow">')
+	._('<div class="container">')
+		._('<div class="logotop">')
+			._('<a class="header-logo" href="index.html"><img src="/static/images/common/logo.png"></a>')
+			._('<div class="header-nav">')
+				._('<a href="course.html" target="_blank">课程</a>')
+				._('<a href="lecturer.html" target="_blank">名师</a>')
+				._('<a href="forum.html" target="_blank">广场</a>')
+			._('</div>')
+		._('</div>')
+		._('<div class="fl right">')
+			._('<div class="search-hd on cl">')
+				._('<form action="search.html" method="get" id="searchForm">')
+					._('<div class="search-status">')
+						._('<div class="search-filter">')
+							._('<a href="javascript:;"><span class="tit">全站</span><i class="icon-down2"></i></a>')
+							._('<ul class="options" style="display: none;">')
+								._('<li><a href="javascript:;" data-rel="all">全站</a></li>')
+								._('<li><a href="javascript:;" data-rel="course">课程</a></li>')
+								._('<li><a href="javascript:;" data-rel="article">文章</a></li>')
+								._('<li><a href="javascript:;" data-rel="lecturer">教师</a></li>')
+							._('</ul>')
+						._('</div>')
+						._('<div class="search-select">')
+							._('<input type="text" class="search-val" placeholder="请输入您要查找的内容" autocomplete="off" value="" name="keywords" id="keywords">')
+							._('<ul class="options" style="display: none;">')
+								._('<li><a href="search.html?keywords=AE入门">AE入门</a></li>')
+								._('<li><a href="search.html?keywords=清华大学课程">清华大学课程</a></li>')
+								._('<li><a href="search.html?keywords=javascript">javascript</a></li>')
+								._('<li><a href="search.html?keywords=硬件入门">硬件入门</a></li>')
+								._('<li><a href="search.html?keywords=古汉语文学">古汉语文学</a></li>')
+							._('</ul>')
+						._('</div>')
+					._('</div>')
+					._('<input type="hidden" name="type" value="all" id="sType">')
+					._('<a class="search-hd-btn" href="javascript:;"><i class="icon-search"></i></a>')
+				._('</form>')
+			._('</div>')
+			._('<div class="header-mobile fl">')
+				._('<a href="mobile.html" title="App下载">')
+					._('<i class="icon-appdownload"></i>')
+				._('</a>')
+			._('</div>')
+			._('<div id="header-user" class="fl header-user">')
+				._('<div class="header-unenter none">')
+					._('<a id="header-register" href="javascript:;">注册</a><span class="header-split">|</span><a id="header-login" href="javascript:;">登录</a>')
+				._('</div>')
+				._('<div class="header-enter">')
+					._('<div id="header-msg" class="header-msg fl">')
+						._('<a class="icon-notifi" href="notice.html" title="我的消息"><i class="msg_count hidden"></i></a>')
+						._('<div class="header-msg-ct">')
+							._('<span class="header-tc-ct-bg"></span>')
+							._('<div class="news-header">')
+								._('<div class="news-title clr">')
+									._('<span class="news-title-ctx">消息</span>')
+									._('<a class="news-title-op" href="javascript:;">全部标记为已读</a>')
+								._('</div>')
+								._('<ul class="news-list" id="news-list">')
+									._('<li class="news-item clr hover">')
+										._('<a class="news-ctx-link  blank_to" target="_blank" href="" title="课程java出新教程了，快去围观学习吧！">课程java出新教程了，快去围观学习吧！</a>')
+										._('<a href="javascript:;" data-id="-1" data-appid="11" class="news-close"></a>')
+									._('</li>')
+								._('</ul>')
+								._('<div class="news-bottom clearfix"><a class="news-bottom-conf" href=""></a><a class="news-more" href="notice.html">查看全部消息</a></div></div>')
+						._('</div>')
+					._('</div>')
+					._('<div id="header-avatar" class="header-avatar fl">')
+						._('<a href="user.html">')
+							._('<img src="/static/images/avatar/avatar2.jpg">')
+						._('</a>')
+					._('</div>')
+				._('</div>')
+			._('</div>')
+		._('</div>')
+		._('<div class="dropdown header-resp">')
+			._('<a id="dLabel" href="javascript:;" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">')
+				._('<i class="icon-menu"></i>')
+			._('</a>')
+			._('<ul class="dropdown-menu .header-menu-r" aria-labelledby="dLabel">')
+				._('<li><a href="course.html"> 课程 </a></li>')
+				._('<li><a href="lecturer.html"> 名师 </a></li>')
+				._('<li><a href="forum.html"> 广场 </a></li>')
+				._('<li><a href="search.html"> 搜索 </a></li>')
+				._('<li class="none"><a href="notice.html"> 我的消息 </a></li>')
+				._('<li class="header-menu-rs2"><a href=""> 登录 </a></li>')
+				._('<li class="header-menu-rs2"><a href=""> 注册 </a></li>')
+				._('<li class="header-menu-rs none"><a href="user.html"> 个人中心 </a></li>')
+			._('</ul>')
+		._('</div>')
+	._('</div>')
+._('</header>');
+$.getScript("/static/libs/bootstrap/3.3.7/js/bootstrap.min.js", function() {
+	$('#main').before(header.toString());
 
-// code
-// <header class="headertop shadow">
-// 	<div class="container">
-// 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 logotop">
-// 			<a class="header-logo db" href="index.html">腾讯互动娱乐</a>
-// 			<div class="header-nav">
-// 				<a href="course.html">课程</a>
-// 				<a href="lecturer.html">名师</a>
-// 				<a href="">广场</a>
-// 			</div>
-// 		</div>
-// 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fl right">
-// 			<div id="header-user" class="fl header-user right">
-// 				<div class="header-unenter none1">
-// 					<a id="header-register" href="javascript:;">注册</a><span class="header-split">|</span><a id="header-login" href="javascript:;">登录</a>
-// 				</div>
-// 				<div class="header-enter none">
-// 					<div id="header-msg" class="header-msg fl">
-// 						<a title="我的消息"><i class="msg_count hidden"></i></a>
-// 						<div class="header-msg-ct none">
-// 							<span class="header-tc-ct-bg"></span>
-// 							<div class="news-header">
-// 								<div class="news-title clr">
-// 									<span class="news-title-ctx">消息</span>
-// 									<a data-click="{&quot;act&quot;:&quot;msg_close_all&quot;}" class="news-title-op" href="javascript:;">全部标记为已读</a>
-// 								</div>
-// 								<ul class="news-list" id="news-list">
-// 									<li class="news-item clr hover">
-// 										<a class="news-ctx-link  blank_to" target="_blank" href="" title="您有 24 条新回复">课程java出新教程了，快去围观学习吧！</a>
-// 										<a data-click="{&quot;act&quot;:&quot;msg_close&quot;}" href="javascript:;" data-id="-1" data-appid="11" class="news-close"></a>
-// 									</li>
-// 								</ul>
-// 								<div class="news-bottom clearfix"><a data-click="{&quot;act&quot;:&quot;msg_set&quot;}" class="news-bottom-conf" href="/my/allconf/#newsconf"></a><a data-click="{&quot;act&quot;:&quot;msg_click&quot;}" class="news-more" href="/msg/messages/list/">查看全部消息</a></div></div>
-// 						</div>
-// 					</div>
-// 					<div id="header-avatar" class="header-avatar fl">
-// 						<a href="/dashboard/">
-// 							<img src="http://q.qlogo.cn/qqapp/101148549/47380775035342D67C08115A20D35A53/40">
-// 						</a>
-// 					</div>
-// 				</div>
-// 			</div>
-// 			<div id="header_login_register" class="fl cf none">
-// 			</div>
-// 			<div class="header-mobile fl right">
-// 				<a href="mobile.html" title="App下载"></a>
-// 			</div>
-// 			<form class="header-search fl right" id="header-search" method="get" action="search.html">
-// 				<div class="search-nav fl">
-// 					<a href="javascript:;" class="tabs-toggle tabs-toggle-hook tabs-toggle-open" hidefocus="true">
-// 						<i class="arrow db">收起</i>
-// 						<span class="tab-curr">全站</span>
-// 					</a>
-// 					<div class="right tabs tabs-hook">
-// 						<a class="tab tab-hook s-bg20 g-fc5 g-fc5h curr curr-hook" data-tab="web" href="http://www.hao123.com" hidefocus="true">全站</a>
-// 						<a class="tab tab-hook g-fc0" data-tab="music" href="http://music.baidu.com" hidefocus="true">课程</a>
-// 						<a class="tab tab-hook g-fc0" data-tab="video" href="http://v.baidu.com" hidefocus="true">文章</a>
-// 						<a class="tab tab-hook g-fc0" data-tab="image" href="http://image.baidu.com" hidefocus="true">教师</a>
-// 					</div>
-// 				</div>
-// 				<input class="fl" type="search" name="query" placeholder="请输入您要查找的内容" value="" autocomplete="off" autofocus="" tabindex="0" autocorrect="off" autocapitalize="off" spellcheck="false">
-// 				<button class="header-submit fl"><i class="icon-search"></i></button>
-// 				<div class="search_header_suggestion" style="display: none;"></div>
-// 			</form>
-// 		</div>
-// 	</div>
-// </header>
+	$('.search-select input').focus(function(){
+		$('.search-select .options').show();
+	});
+	$('.search-select input').blur(function(){
+		setTimeout(function(){
+			$('.search-select .options').hide();
+		}, 4e2);
+	});
+	$(".search-hd-btn").click(function(e){
+		var e = e || event, // enent做兼容
+		isTrue = $(".search-hd").is(".on"); // 判断.search-hd是否是展开状态
+		e.stopPropagation(); // 阻止冒泡
+		// if ($(".search-hd").addClass('on').find('input').val() == "") { // 在输入框没有文字时执行
+		// 	if (isTrue) { // isTrue等于 true 移除on，false就添加on
+		// 		$(".search-hd").removeClass('on').find('input').blur();
+		// 		$('.search-select ul').hide();
+		// 	} else {
+		// 		$(".search-hd").addClass('on').find('input').focus();
+		// 	}
+		// } else { //提交事件search-hd
+			$(".search-hd").find('input').focus();
+			if (isTrue) $("#searchForm").submit();
+		// }
+	});
+	// $(".search-filter").click(function(e){
+	// 	 e.stopPropagation();
+	// });
+	// $('.search-select a').click(function(){
+	// 	$(".search-hd").find('input').val($(this).html());
+	// 	$('.search-select .options').hide();
+	// });
+});

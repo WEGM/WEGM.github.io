@@ -3,6 +3,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
+
 var project;
 (function (project) {
     "use strict";
@@ -43,7 +44,7 @@ var project;
             var hu = 220 + (timeOffset * 50)
             this.graphics
                 .setStrokeStyle(strokeSize)
-                .beginStroke("hsla("+hu+", 70%, 50%,0.5)");
+                .beginStroke("hsla("+hu+", 80%, 70%,0.2)");
             var vertexArr = [];
             for (var i = 0; i <= vertexNum; i++) {
                 var noiseNum = noise(i * 0.2, this._time + (timeOffset*2)) - 0.5;
@@ -111,6 +112,7 @@ var project;
     }(createjs.Shape));
     project.WaveShape = WaveShape;
 })(project || (project = {}));
+
 var project;
 (function (project) {
     window.addEventListener("load", function () {
@@ -179,24 +181,5 @@ var project;
 })(project || (project = {}));
 
 var classLists = '';
-var classTpl = simpleTpl();
-classTpl._('<div class="lists-content-card col-lg-3 col-md-6 col-sm-6 col-xs-6">')
-	._('<a target="_blank" class="course-card g-shadow" href="">')
-		._('<div class="course-card-cover" style="background:url(/static/images/classcover/cover.jpg) center center no-repeat;background-size:cover;"></div>')
-		._('<div class="course-card-content">')
-			._('<h3 class="course-card-name ui-nowrap-multi">BAT大咖助力 全面升级Android面试BAT大咖助力 全面升级Android面试BAT大咖助力 全面升级Android面试</h3>')
-			._('<p class="course-card-intro ui-nowrap-multi">2017最全面，见效最快的Android面试课程，赢取满意offer的不二之选2017最全面，见效最快的Android面试课程，赢取满意offer的不二之选2017最全面，见效最快的Android面试课程，赢取满意offer的不二之选2017最全面，见效最快的Android面试课程，赢取满意offer的不二之选</p>')
-			._('<div class="clearfix course-card-bottom">')
-				._('<div class="course-card-teacher">')
-					._('<div class="course-card-teacher-avatar">')
-						._('<img src="/static/images/avatar/avatar01.png">')
-					._('</div>')
-					._('<p class="course-card-teacher-name">老师姓名</p>')
-				._('</div>')
-				._('<div class="course-card-info">564人在学</div>')
-			._('</div>')
-		._('</div>')
-	._('</a>')
-._('</div>');
 for (var i = 0; i < 20; i++) classLists += classTpl;
 $('.class-lists .lists-content').html(classLists);

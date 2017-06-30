@@ -152,10 +152,10 @@ $.getScript("/static/libs/canvas/canvas.js", function() {
     }
     C();
 });
-function calHeight() {
-    $('#main').css('height', $(window).height() - $('header').height() - $('footer').height() - 40);
-};
-calHeight();
-$(window).resize(function() {
-    calHeight();
-});
+// function calHeight() {
+//     $('#main').css('height', $(window).height() - $('header').height() - $('footer').height() - 40);
+// };
+// calHeight();
+// $(window).resize(function() {
+//     calHeight();
+// });
