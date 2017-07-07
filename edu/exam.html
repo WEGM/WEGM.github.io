@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>K12</title>
+
+	<meta property="og:url" content="" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:image" content="" />
+
+	<link rel="stylesheet" media="all" href="/static/css/reset.css">
+	<link rel="stylesheet" media="all" href="/static/css/common.css">
+	<link rel="stylesheet" media="all" href="/static/libs/bootstrap/3.3.7/css/bootstrap.css">
+
+	<link rel="stylesheet" media="all" href="/static/page/exam/exam.css">
+	<script type="text/javascript" src="/static/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="main">
+		<div class="container">
+			<div id="exam-introduction" class="exam-page exam-introduction clearfix col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="row mb30">
+					<div class="pt60 pb20 f20 tc">
+						<div>
+							您好，用户昵称！欢迎参加<span style="color: rgb(0, 158, 231); display: inline;" data-link="visible{:examName}">《考试名称》</span>
+						</div>
+					</div>
+				</div>
+				<div class="row mb30">
+					<div data-link="visible{:paperGuide}" style="display: block;">
+		                <h4 class="mb10">试卷说明：</h4>
+		                <div class="sets-question-item paper pt20 pb20 pl30 pr30">
+			                <pre id="exam-paper-guide">试卷说明内容</pre>
+		                </div>
+	                </div>
+				</div>
+				<div class="row mb50">
+					<div class="mb20">
+						<h4 class="mb10">注意事项：</h4>
+						<ul class="notice">
+							<li>答题过程中系统自动计时、自动保存答案，到时自动交卷；</li>
+							<li class="red">考试前请关闭其他浏览器窗口，关闭可能弹窗的应用如QQ、屏保等，考试中不要切换到考试窗口之外的区域；</li>
+							<li>如果答题过程中因电源、网络故障等造成中断，请退出并在几分钟之内再次按照相同的步骤进入考试，从中断处继续答题；</li>
+							<li>Sogou、360浏览器请用极速模式，如果出现异常无法答题请换一种浏览器；</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row mb30">
+					<div class="tc">
+						<button id="btn-introduction" type="button" class="btn btn-primary" data-link="class{merge:(callServer==true) toggle='disabled'} disabled{:callServer==true}">我知道了</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="/static/component/common/common.js"></script>
+	<script type="text/javascript" src="/static/component/common/header.js"></script>
+	<script type="text/javascript" src="/static/component/common/footer.js"></script>
+	
+	<script type="text/javascript" src="/static/page/exam/exam.js"></script>
+</body>
+</html>

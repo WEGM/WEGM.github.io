@@ -133,7 +133,7 @@ $("#backTop").click(function() {
 
 var classTpl = simpleTpl();
 classTpl._('<div class="lists-content-card col-lg-3 col-md-6 col-sm-6 col-xs-12">')
-	._('<a target="_blank" class="course-card g-shadow" href="coursedetail.html?from=index">')
+	._('<a target="_blank" class="course-card g-shadow" href="courselist.html?from=index">')
 		._('<div class="course-card-cover" style="background:url(/static/images/classcover/cover.jpg) center center no-repeat;background-size:cover;"></div>')
 		._('<div class="course-card-content">')
 			._('<h3 class="course-card-name ui-nowrap-multi">BAT大咖助力 全面升级Android面试BAT大咖助力 全面升级Android面试BAT大咖助力 全面升级Android面试</h3>')
@@ -169,3 +169,139 @@ articleTpl._('<p class="clearfix">')
 	._('<i>•</i>')
 	._('<a target="_blank" href="forumdetail.html?from=index" class="content ui-nowrap-multi">MongoDB给数据库创建用户</a>')
 ._('</p>');
+
+var historyTpl = simpleTpl();
+historyTpl._('<div class="clearfix tl-item ">')
+	._('<span class="time">')
+		._('<b>2017</b>')
+		._('<em>07月01日</em>')
+	._('</span>')
+	._('<div class="course-list course-list-m">')
+		._('<ul class="clearfix">')
+			._('<li class="course-one">')
+				._('<div class="course-list-img fl">')
+					._('<a href="courselist.html?from=user" target="_blank">')
+						._('<img width="200" height="113" alt="课程名称" src="/static/images/classcover/course1.jpg">')
+					._('</a>')
+				._('</div>')
+				._('<div class="course-list-cont">')
+					._('<h3 class="study-hd">')
+						._('<a href="courselist.html?from=user" target="_blank">课程名称</a>')
+						._('<span class="i-new">更新完毕</span>')
+					._('</h3>')
+					._('<div class="study-points">')
+						._('<span class="i-left span-common">已学26%</span>')
+						._('<span class="i-mid span-common">用时 86分</span>')
+						._('<span class="i-right span-common">学习至3-1 课程名称</span>')
+					._('</div>')
+					._('<div class="catog-points">')
+						._('<span class="i-left span-common"><a href="courselist.html?from=user">笔记 <i>0</i></a></span>')
+						._('<span class="i-mid span-common"><a href="courselist.html?from=user">代码 <i>0</i></a></span>')
+						._('<span class="i-right span-common"><a href="courselist.html?from=user">问答 <i>0</i></a></span>')
+						._('<a href="courselist.html?from=user" target="_blank" class="btn-red continute-btn">继续学习</a>')
+					._('</div>')
+				._('</div>')
+			._('</li>')
+		._('</ul>')
+	._('</div>')
+._('</div>');
+
+
+
+// <div class="mod-popup popup mod-login none">
+// 	<div class="popup-wrap">
+// 		<a href="" class="btn-popup-close close"><i class="icon-close"></i></a>
+// 		<div class="popup-hd">
+// 			<p class="title">账号密码登录</p>
+// 		</div>
+// 		<div class="popup-bd">
+// 			<form action="" method="post" class="popup-form">
+// 				<div class="popup-input">
+// 					<input type="text" name="email" placeholder="手机号或邮箱" class="clear-input">
+// 					<input name="password" type="password" placeholder="密码" class="clear-input">
+// 				</div>
+// 				<a href="javascript:;" class="btn"><span class="text">立即登录</span></a>
+// 			</form>
+// 			<a class="reset-password red-link">忘记密码？</a>
+// 			<div class="switch-back">还没有账号？<a class="red-link">立即注册</a></div>
+// 		</div>
+// 	</div>
+// </div>
+
+// <div class="mod-popup popup mod-sign none">
+// 	<div class="popup-wrap">
+// 		<a href="" class="btn-popup-close close"><i class="icon-close"></i></a>
+// 		<div class="popup-hd">
+// 			<p class="title">注册账号</p>
+// 		</div>
+// 		<div class="popup-bd">
+// 			<form action="" method="post" class="popup-form">
+// 				<div class="popup-input">
+// 					<input type="text" name="email" placeholder="手机号或邮箱" class="clear-input">
+// 					<input type="text" name="nickname" placeholder="用户名" class="clear-input">
+// 					<input name="password" type="password" placeholder="密码" class="clear-input">
+// 					<input name="password_repeat" type="password" placeholder="重复密码" class="clear-input">
+// 					<div class="radio-wrap">
+// 						<span class="active">学生</span> 
+// 						<span>老师</span> 
+// 					</div>
+// 				</div>
+// 				<label for="agree" class="checkbox">
+// 					&nbsp;我已阅读并同意相关服务条款和隐私政策
+// 				</label>
+// 				<a href="javascript:;" class="btn"><span class="text">立即注册</span></a>
+// 			</form>
+// 			<a class="reset-password red-link">忘记密码？</a>
+// 			<div class="switch-back">已有账号？<a class="red-link">立即登录</a></div>
+// 		</div>
+// 	</div>
+// </div>
+
+// <div class="mod-popup popup mod-reset none">
+// 	<div class="popup-wrap">
+// 		<a href="" class="btn-popup-close close"><i class="icon-close"></i></a>
+// 		<div class="popup-hd">
+// 			<p class="title">找回密码</p>
+// 		</div>
+// 		<div class="popup-bd">
+// 			<form action="" method="post" class="popup-form">
+// 				<div class="popup-input">
+// 					<input type="text" name="email" placeholder="手机号或邮箱" class="clear-input">
+// 				</div>
+// 				<a href="javascript:;" class="btn"><span class="text">立即重置</span></a>
+// 			</form>
+// 			<div class="switch-back">又想起来了？<a class="red-link">立即登录</a></div>
+// 		</div>
+// 	</div>
+// </div>
+
+// <div class="mod-popup popup mod-info none1">
+// 	<div class="popup-wrap">
+// 		<a href="" class="btn-popup-close close"><i class="icon-close"></i></a>
+// 		<div class="popup-hd">
+// 			<p class="title">修改个人信息</p>
+// 		</div>
+// 		<div class="popup-bd">
+// 			<form action="" method="post" class="popup-form">
+// 				<div class="popup-input">
+// 					<input type="text" name="email" placeholder="手机号或邮箱" class="clear-input">
+// 					<input type="text" name="nickname" placeholder="用户名" class="clear-input">
+// 					<input name="password" type="password" placeholder="密码" class="clear-input">
+// 					<input name="password_repeat" type="password" placeholder="重复密码" class="clear-input">
+// 					<div class="radio-wrap">
+// 						<span class="active">学生</span> 
+// 						<span>老师</span> 
+// 					</div>
+// 				</div>
+// 				<label for="agree" class="checkbox">
+// 					&nbsp;我已阅读并同意相关服务条款和隐私政策
+// 				</label>
+// 				<div class="btn-box">
+					
+// 				</div>
+// 				<a href="javascript:;" class="btn"><span class="text">立即注册</span></a>
+// 			</form>
+// 			<div class="switch-back"><a class="red-link">更换头像？</a></div>
+// 		</div>
+// 	</div>
+// </div>

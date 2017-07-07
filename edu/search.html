@@ -18,33 +18,36 @@
 
 	<link rel="stylesheet" media="all" href="/static/page/search/search.css">
 	<script type="text/javascript" src="/static/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" src="/static/libs/particles/particles.min.js"></script>
 </head>
 <body>
 	<div id="main">
 		<div class="container">
 			<div class="search-content col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<div class="search-header">
-					<div class="search-form clearfix">
-						<i class="icon-search"></i>
-						<input type="text" class="search-form-ipt js-search-ipt" placeholder="请输入想搜索的内容">
-						<span class="search-form-btn js-search-btn">搜索</span>
-						<ul class="search-area-prge js-search-area-prge"></ul>
-						<ul class="hot">
-							<li>热门搜索：</li>
-							<li><a href="" target="_blank">AngularJS</a></li>
-							<li><a href="" target="_blank">mysql</a></li>
-							<li><a href="" target="_blank">java</a></li>
-							<li><a href="" target="_blank">android</a></li>
-							<li><a href="" target="_blank">C</a></li>
-							<li><a href="" target="_blank">php</a></li>
-							<li><a href="" target="_blank">javascript</a></li>
-							<li><a href="" target="_blank">ajax</a></li>
-						</ul>
-					</div>
+				<div class="search_nav">
+				    <div class="search_navcon">
+				        <form action="search.html" method="get">
+				        <div class="search_navleft">
+				            <div class="select-box select-box-ser">
+				                <span class="on">全站</span>
+				                <i class="icon-down2"></i>
+				                <div class="select-option">
+				                    <a rel="all" href="" class="on">全站</a>
+				                    <a rel="course" href="">课程</a>
+				                    <a rel="article" href="">文章</a>
+				                    <a rel="lecturer" href="">老师</a>
+				                </div>
+				            </div>
+				            <input baidusug="1" type="text" name="keywords" autocomplete="off">
+				            <input type="hidden" name="type" value="all">
+				        </div>
+				        <div class="search_navright">
+				            <input type="submit" value="搜 索">
+				        </div>
+				        </form>
+				    </div>
 				</div>
 				<div class="search-body">
-					<div class="search-nav-warp">
+					<div class="search-nav-warp none">
 						<div class="search-nav" id="searchNav">
 							<a href="javascript:;" data-page="index" class="active">全站</a>
 							<a href="javascript:;" data-page="course">课程</a>
@@ -62,7 +65,7 @@
 					<div class="sortbar-inner">
 						<ul class="sorts">
 							<li class="sort"><a class="on" title="最新" href="">最新</a></li>
-							<li class="sort"><a class="" title="最热" href="">最热</a></li>
+							<li class="sort"><a class="" title="热门" href="">热门</a></li>
 						</ul>
 						<div class="pager">
 							<ul class="items">
@@ -96,6 +99,8 @@
 	<script type="text/javascript" src="/static/component/common/common.js"></script>
 	<script type="text/javascript" src="/static/component/common/header.js"></script>
 	<script type="text/javascript" src="/static/component/common/footer.js"></script>
+	
+	<script type="text/javascript" src="/static/libs/particles/particles.min.js"></script>
 	<script type="text/javascript" src="/static/page/search/search.js"></script>
 </body>
 </html>
