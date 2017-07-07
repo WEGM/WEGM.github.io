@@ -22,7 +22,7 @@ input {
 	padding: 0 15px;
 }
 .search-content {
-    padding: 0 15px;
+    /*padding: 0 15px;*/
 }
 .search-content .search-form {
 	display: inline-block;
@@ -97,7 +97,7 @@ input {
 	color: #333;
 }
 .search-content .search-body {
-	padding: 0 15px;
+	padding: 0 5px;
 }
 .search-content .search-nav-warp {
     text-align: center;
@@ -297,5 +297,9 @@ input {
     .select-box-ser {
         width: 70px;
         min-width: 70px;
+    }
+    .search_nav {
+        margin: 45px 0 35px;
+        height: 40px;
     }
 }

@@ -1,4 +1,6 @@
-
+.agree-with, .oppose {
+    display: none;
+}
 .banner-container img {
     max-width: 100%;
 }

@@ -261,6 +261,8 @@
         display: none;
     }
     .post-container .header_ask {
+        position: relative;
+        top: -3px;
         display: inline-block;
     }
     .post-container .post_inform {
@@ -275,7 +277,7 @@
         display: none;
     }
     .post_header .view_whole {
-        padding-left: 20px;
+        padding-left: 13px;
     }
     .forum-container {
         padding-top: 20px;

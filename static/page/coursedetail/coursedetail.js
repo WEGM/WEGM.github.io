@@ -1,6 +1,6 @@
 function calHeight() {
 	var width = $(window).width();
-	var height = $(window).height() - $('.headertop').height() - $('footer').height() - 40;
+	var height = $(window).height() - $('.headertop').height() - $('footer').height();
     $('#studyMain, .js-box-wrap').css({
     	'width': width,
     	'height': height

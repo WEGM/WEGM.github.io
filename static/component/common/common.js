@@ -112,6 +112,71 @@ var getRandomArbitrary = function(min, max) {
 	return parseInt(Math.random()*(max - min)+min);
 };
 
+$.fn.countDown = function(options) {
+    var defaultVal = {
+        // 存放结束时间
+        eAttr : 'etime',
+        sAttr : 'stime', // 存放开始时间
+        wTime : 29, // 以100毫秒为单位进行演算
+        etpl : '%H%:%M%:%S%.%ms%', // 还有...结束
+        stpl : '%H%:%M%:%S%.%ms%', // 还有...开始
+        sdtpl : '已开始',
+        otpl : '活动已结束', // 过期显示的文本模版
+        stCallback: null,
+        sdCallback: null,
+        otCallback: null
+    };
+    var dateNum = function(num) {
+        return num < 10 ? '0' + num : num;
+    };
+    var subNum = function(num){
+        numF = num.toString().substring(0,1);
+        numS = num.toString().substring(1,num.length);
+        return num = "<label><i>"+ numF +"</i><i>"+ numS + "</i></label>";
+    };
+    var s = $.extend(defaultVal, options);
+    var vthis = $(this);
+    var num = 60;
+    var runTime = function() {
+        var nowTime = new Date().getTime();
+        vthis.each(function() {
+            var nthis = $(this);
+            var sorgT = parseInt(nthis.attr(s.sAttr));
+            var eorgT = parseInt(nthis.attr(s.eAttr));
+            var sT = isNaN(sorgT) ? 0 : sorgT - nowTime;
+            var eT = isNaN(eorgT) ? 0 : eorgT - nowTime;
+            var showTime = function(rT, showTpl) {
+                var s_ = Math.round((rT % 60000) / s.wTime);
+                s_ = subNum(dateNum(Math.min(Math.floor(s_ / 1000 * s.wTime), 59)));
+                var m_ = subNum(dateNum(Math.floor((rT % 3600000) / 60000)));
+                var h_ = subNum(dateNum(Math.floor((rT % 86400000) / 3600000)));
+                var d_ = subNum(dateNum(Math.floor(rT / 86400000)));
+                var ms_ = Math.floor(rT % 1000);
+                if(ms_>=10 && ms_ <100) ms_ = "0"+ms_;
+                if(ms_ < 10) ms_ = "00"+ms_;
+                ms_ = ms_.toString().substr(0,2);
+                ms_ = subNum(ms_);
+                nthis.html(showTpl.replace(/%S%/, s_).replace(/%M%/, m_).replace(/%H%/, h_).replace(/%D%/, d_).replace(/%ms%/,ms_));
+            };
+            if (sT > 0) {
+                showTime(sT, s.stpl);
+                s.stCallback && s.stCallback();
+            } else if (eT > 0) {
+                showTime(eT, s.etpl);
+                s.sdCallback && s.sdCallback();
+            } else {
+                nthis.html(s.otpl);
+                s.otCallback && s.otCallback();
+            }
+
+        });
+    };
+
+    setInterval(function() {
+        runTime();
+    }, s.wTime);
+};
+
 $('body').append('<div id="J_GotoTop" class="elevator"><a href="" class="elevator-msg" target="_blank"><i class="icon-feedback"></i><span class="">联系我们</span></a><a href="mobile.html" target="_blank" class="elevator-app"><i class="icon-appdownload"></i><span class="">APP下载</span><div class="elevator-app-box"></div></a><a href="javascript:void(0)" class="elevator-weixin" id="js-elevator-weixin"><i class="icon-wxgzh"></i><span class="">官方微信</span><div class="elevator-weixin-box"></div></a><a href="javascript:void(0)" class="elevator-top no-goto" style="" id="backTop"><i class="icon-up2"></i><span class="">返回顶部</span></a></div>');
 function isTop() {
 	height = $(window).height(),
@@ -305,3 +370,19 @@ historyTpl._('<div class="clearfix tl-item ">')
 // 		</div>
 // 	</div>
 // </div>
+// 
+
+var flagFoot = setInterval(function(){
+	var isFootLoad = $('footer').length;
+	if (isFootLoad > 0) {
+		clearInterval(flagFoot);
+		flagFoot = null;
+		fixFootPad();
+	}
+}, 200);
+function fixFootPad() {
+    $('body').css('padding-bottom', $('footer').height());
+};
+$(window).resize(function() {
+    fixFootPad();
+});

@@ -244,7 +244,7 @@ input::-webkit-input-placeholder{
 	display: inline-block;
 }
 .headertop .header-logo img {
-	height: 35px;
+	height: 32px;
 }
 .headertop .header-nav {
 	display: inline-block;
@@ -505,6 +505,9 @@ a.news-close {
 }
 
 /* 全局搜索 */
+.sortbar-lists {
+	padding: 0 10px !important;
+}
 .search-hd {
     position: relative;
     float: left;
@@ -1031,9 +1034,12 @@ footer {
 	background: #3c3d3c;
 	color: #999;
 	font-size: 12px;
-	padding: 20px 0;
 	clear: both;
 	z-index: 1;
+}
+footer .container {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 footer p {
 	margin: 0;
@@ -2324,8 +2330,51 @@ footer {
 	background: url(/static/images/common/checkbox_check.png) no-repeat;
 }
 
+/* 考试头部 */
+.h-exam {
+	display: block !important;
+	height: 52px;
+	line-height: 52px;
+}
+.h-exam li {
+	float: left;
+	padding: 0 20px;
+	border-left: 1px solid #eee;
+}
+.h-exam li:first-child {
+	border: 0 none;
+}
+.h-exam .h-user {
+	font-size: 12px;
+}
+.h-exam .h-user img {
+	position: relative;
+	top: -2px;
+	width: 28px;
+	height: 28px;
+	border-radius: 100%;
+	overflow: hidden;
+	margin-right: 10px;
+}
+
 /* 适配 */
 @media (max-width: 992px) {
+	.h-exam {
+		height: 43px;
+		line-height: 43px;
+	}
+	.h-exam li {
+		padding: 0;
+	}
+	.h-exam .h-user {
+		display: none;
+	}
+	.headertop .header-logo img {
+	    height: 23px;
+	}
+	.header-resp {
+		margin: 8px 0;
+	}
 	.logotop {
 		margin-top: 12px;
 	}
@@ -2339,6 +2388,16 @@ footer {
 	}
 	.dropdown {
 		display: block;
+	}
+}
+@media screen
+and (min-width: 768px)
+and (max-width: 1200px) {
+	.teacher-lists .lists-content-card:nth-child(1) {
+		display: none !important;
+	}
+	.teacher-lists .lists-content-card:nth-child(2) {
+		display: none !important;
 	}
 }
 @media (max-width: 768px) {
@@ -2369,7 +2428,11 @@ footer {
 		line-height: 20px;
 	    max-height: 40px;
 	}
+	footer {
+		font-size: 10px;
+	}
 	footer .container {
+		padding: 6px 0;
 		text-align: center;
 	}
 	footer .leftArea p:first-child {
@@ -2389,6 +2452,11 @@ footer {
 	.container-lists .page .text-page-tag {
 		display: none;
 	}
+	.search-lists-content .search-list .fllist {
+	    height: 88px;
+	    overflow: hidden;
+	    overflow-y: scroll;
+	}
 }
 @media (max-width: 640px) {
 	.swiper-button-next, .swiper-button-prev {
@@ -2398,7 +2466,7 @@ footer {
 
 @media (max-width: 460px) {
 	.swiper-button-next, .swiper-button-prev {
-		transform: scale(.6);
+		transform: scale(.5);
 	}
 	.w-e-toolbar {
 		display: none !important;
@@ -2412,6 +2480,12 @@ footer {
     .elevator .elevator-top {
     	display: block;
     }
+	.elevator {
+	    padding: 0 12px;
+	}
+	.elevator a {
+	    padding: 13px 0;
+	}
     .elevator .elevator-app:hover i,
     .elevator .elevator-faq:hover i,
     .elevator .elevator-msg:hover i,
@@ -2430,7 +2504,28 @@ footer {
 		padding: 0 10px;
 		margin-bottom: 10px;
 	}
+	.swiper-slide img {
+	    height: 190px;
+	}
+	.container-lists .lists-title {
+	    font-size: 18px;
+	}
 	.teacher-card {
-	    padding-bottom: 160%;
+	    padding-bottom: 125%;
+	}
+	.teacher-card-cover {
+		width: 62%;
+		height: 0;
+		padding-bottom: 62%;
+		border-radius: 100%;
+		overflow: hidden;
+		margin: 20px auto;
+	}
+	.teacher-card-detail {
+		display: none !important;
+	}
+	.teacher-card-content {
+		background: transparent;
+		margin-bottom: 20px;
 	}
 }
