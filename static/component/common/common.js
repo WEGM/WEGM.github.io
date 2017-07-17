@@ -92,20 +92,90 @@ Math.sn = function (len, radix) {
 	return sn.join('').toLocaleLowerCase().replace(re, "");
 };
 
-var getResult = function(url, data, callback, showloading, $target, isAsync) {
-	if (showloading) showLoading();
-	$.ajax({
-		type : 'GET',
-		async : typeof isAsync === 'undefined' ? false : isAsync,
-		url : domain_url + url + dev,
-		data: data,
-		dataType : "jsonp",
-		jsonp : callback,
-		complete: function() {
-			if (showloading) hideLoading();
-		},
-		success : function(data) {}
+var showLoading = function($container, tips) {
+	var t = simpleTpl(), spinnerSize = 146,
+		width = $(window).width(),
+		height = $(window).height(),
+		$container = $container || $('body'),
+		$spinner = $container ? $container.find('#spinner') : $('body').children('#spinner'),
+		tips = tips || '努力加载中...';
+
+	if ($spinner.length > 0) {
+		$spinner.remove();
+	};
+	t._('<div id="spinner" class="spinner">')
+		._('<div class="new-spinner">')
+			._('<div class="new-overlay"></div>')
+				._('<div class="new-spinner-inner">')
+					._('<p class="new-spinner-spinner"></p>')
+					._('<p class="new-spinner-text">' + tips + '</p>')
+				._('</div>')
+			._('</div>')
+		._('</div>')
+	._('</div>');
+	$spinner = $(t.toString()).css({'top': (height - spinnerSize) / 2, 'left': (width - spinnerSize) / 2});
+	$container.append($spinner);
+	if(screen.width == $(window).width()){
+		$('.new-spinner').addClass('scale')
+	}
+};
+
+var hideLoading = function($container) {
+	if ($container) {
+		$container.find('.spinner').remove();
+	} else {
+		$('body').children('.spinner').remove();
+	};
+};
+
+var showTips = function(word, timer) {
+	var id = Math.sn();
+	var paddingValue = 0,
+		fontSizeValue = 0,
+		borderRadiusValue = 0;
+	if (screen.width == $(window).width()) {
+		paddingValue = '12px 15px';
+		fontSizeValue = '14px';
+		borderRadiusValue = '6px';
+	} else {
+		paddingValue = '24px 30px';
+		fontSizeValue = '28px';
+		borderRadiusValue = '12px';
+	}
+	
+	$('body').append('<div id="tips_' + id + '" class="tips none" style="position:fixed;max-width:80%;top:0;z-index:999;color:#FFF;padding:'+ paddingValue+';background:rgba(0,0,0,.55);font-size:'+fontSizeValue+';text-align:center;border-radius:'+borderRadiusValue+';z-index: 199999;"></div>');
+	$('#tips_' + id).html(word).removeClass('none').css('opacity', '0');
+	$('#tips_' + id).css({'left': ($(window).width()-$('#tips_' + id).width())/2, '-webkit-transform': "translateY(40vh)"});
+	$('#tips_' + id).animate({'opacity': '1', '-webkit-transform': "translateY(45vh)"}, 300, function() {
+		setTimeout(function() {
+			$('#tips_' + id).animate({'opacity':'0'}, 200, function() {$('#tips_' + id).remove();});
+		}, timer || 1200);
 	});
+};
+
+var getResult = function(url, data, callback, showloading, $target, isAsync) {
+	if (debug) {
+		if (typeof(eval(callback)) == 'function' && typeof(callback + '_data') != 'undefined') {
+			var data = eval(callback + '_data') || null;
+			window[callback](data);
+		} else {
+			console.warn('callback is null!');
+		}
+	} else {
+		if (showloading) showLoading();
+		$.ajax({
+			type : 'GET',
+			async : typeof isAsync === 'undefined' ? false : isAsync,
+			url : domain_url + url + dev,
+			data: data,
+			dataType : "jsonp",
+			jsonp : callback,
+			complete: function() {
+				if (showloading) hideLoading();
+			},
+			success : function(data) {}
+		});
+	}
 };
 
 var getRandomArbitrary = function(min, max) {
