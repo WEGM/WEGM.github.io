@@ -1,0 +1,268 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en-US"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+<script>window.jQuery || document.write('<script src="http://code.jquery.com/jquery-1.7.2.min.js"><\/script>')</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Fredericka+the+Great">
+
+<title>Platipus &raquo; About</title>
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Platipus &raquo; Feed" href="http://projects.platipussoftwareinside.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Platipus &raquo; Comments Feed" href="http://projects.platipussoftwareinside.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/projects.platipussoftwareinside.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.3"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='pilotfish_main_style-css'  href='http://projects.platipussoftwareinside.com/wp-content/themes/PilotFishCopy/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='http://projects.platipussoftwareinside.com/wp-content/plugins/jetpack/css/jetpack.css?ver=5.4' type='text/css' media='all' />
+<script type='text/javascript' src='http://projects.platipussoftwareinside.com/wp-content/themes/PilotFishCopy/js/modernizr.js'></script>
+<script type='text/javascript' src='http://projects.platipussoftwareinside.com/wp-content/themes/PilotFishCopy/js/css3-mediaqueries.js'></script>
+<link rel='https://api.w.org/' href='http://projects.platipussoftwareinside.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://projects.platipussoftwareinside.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://projects.platipussoftwareinside.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.8.3" />
+<link rel="canonical" href="http://projects.platipussoftwareinside.com/about-platipus/" />
+<link rel='shortlink' href='http://wp.me/P918lv-39' />
+<link rel="alternate" type="application/json+oembed" href="http://projects.platipussoftwareinside.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fprojects.platipussoftwareinside.com%2Fabout-platipus%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://projects.platipussoftwareinside.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fprojects.platipussoftwareinside.com%2Fabout-platipus%2F&#038;format=xml" />
+<link id="photo-box-style" rel="stylesheet" href="http://projects.platipussoftwareinside.com/wp-content/plugins/photos-box/media/colorbox.css" />
+<link id="photo-box-style-site" rel="stylesheet" href="http://projects.platipussoftwareinside.com/wp-content/plugins/photos-box/media/site.css" />
+<!-- PhotoBox at http://photoboxone.com -->
+<script id="photo-box-script" type="text/javascript" src="http://projects.platipussoftwareinside.com/wp-content/plugins/photos-box/media/jquery.colorbox-min.js"></script>
+<script type="text/javascript">/* <![CDATA[ */
+photoboxready(function($){
+	if( typeof $ == 'undefined' ) return;
+		$('a').each(function(){
+		var self = $(this);
+		if( self.hasClass('photobox') == false && (/\.(gif|png|jp(e|g|eg))((#|\?).*)?$/i).test( this.href ) ){
+			self.addClass('photobox_single').colorbox({photo:true,maxWidth:'90%',maxHeight:'90%'});
+		}
+	});
+		$('.gallery-photo-box').each(function(){
+		var slideshow_speed = this.getAttribute('data-slideshowSpeed')!=null?this.getAttribute('data-slideshowSpeed'):2500;
+		$('a.photobox',this).each(function(){
+			var self = $(this).addClass('cbload'),
+				rel = this.rel || '';
+			self.colorbox({
+				rel: rel,
+				slideshow: true,
+				slideshowAuto: false,
+				slideshowSpeed: slideshow_speed,
+				maxWidth:"95%",
+				maxHeight:"95%",
+				photo: true,
+				slideshowStart: " ",
+				slideshowStop: " " 
+			});
+		});
+	});
+	});
+/* ]]> */</script>
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+<link rel='dns-prefetch' href='//i0.wp.com'/>
+<link rel='dns-prefetch' href='//i1.wp.com'/>
+<link rel='dns-prefetch' href='//i2.wp.com'/>
+<style type='text/css'>img#wpstats{display:none}</style><meta name="description" content="Blending Realities We develop Augmented Reality (AR) and Virtual Reality (VR) experiences. We&#039;ve been building Augmented Reality since 2008. Adding meaningful layers to the world around you and giving you new ways of interacting with it. AR is quickly becoming the new interface to the world and we develop the apps to make that transition as seamless&hellip;" />
+	<style type="text/css">
+			.site-name,
+		.site-description {
+			position: absolute !important;
+			clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+			clip: rect(1px, 1px, 1px, 1px);
+		}
+		</style>
+	<style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("http://projects.platipussoftwareinside.com/wp-content/uploads/2017/01/AndroidHuge3.png"); background-position: center center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; }
+</style>
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="About" />
+<meta property="og:url" content="http://projects.platipussoftwareinside.com/about-platipus/" />
+<meta property="og:description" content="Blending Realities We develop Augmented Reality (AR) and Virtual Reality (VR) experiences. We&#8217;ve been building Augmented Reality since 2008. Adding meaningful layers to the world around you a…" />
+<meta property="article:published_time" content="2013-11-05T16:55:24+00:00" />
+<meta property="article:modified_time" content="2017-09-13T07:39:57+00:00" />
+<meta property="og:site_name" content="Platipus" />
+<meta property="og:image" content="http://projects.platipussoftwareinside.com/wp-content/uploads/2017/08/InternUCD-631x1024.png" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" href="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2016/06/cropped-favP512.png?fit=32%2C32" sizes="32x32" />
+<link rel="icon" href="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2016/06/cropped-favP512.png?fit=192%2C192" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2016/06/cropped-favP512.png?fit=180%2C180" />
+<meta name="msapplication-TileImage" content="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2016/06/cropped-favP512.png?fit=270%2C270" />
+</head>
+
+<body class="page-template-default page page-id-195 page-parent custom-background">                
+<div id="container" class="hentry">
+        <div id="header">
+    	        <div id="logo">
+            <span class="site-name"><a href="http://projects.platipussoftwareinside.com/" title="Platipus" rel="home">Platipus</a></span>
+            <span class="site-description">Augment Everything</span>
+            <a href="http://projects.platipussoftwareinside.com/"><img src="http://projects.platipussoftwareinside.com/wp-content/uploads/2015/12/Header1.png" width="400" height="125" alt="Augment Everything" /></a>
+        </div><!-- end of #logo -->
+        
+    
+<!-- Primary Navigation Menu -->
+    <nav id="access">
+	<div class="menu-menu-container"><ul id="menu-menu" class="menu"><li id="menu-item-1565" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1565"><a title="Platipus blog" href="http://projects.platipussoftwareinside.com/blog/">Stories</a></li>
+<li id="menu-item-200" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-200"><a title="Platipus Portfolio Projects" href="http://projects.platipussoftwareinside.com/project/">Projects</a></li>
+<li id="menu-item-1564" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1564"><a title="Platipus Clients" href="http://projects.platipussoftwareinside.com/clients/">Clients</a></li>
+<li id="menu-item-202" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-202"><a title="About (Platip)us" href="http://projects.platipussoftwareinside.com/about-platipus/">About</a></li>
+</ul></div>    </nav>
+    </div><!-- end of #header -->
+
+    	    <div id="wrapper" class="clearfix">
+
+            <div id="content-full" class="row span12" role="main">       
+
+		        
+            <article id="post-195" class="post-195 page type-page status-publish hentry">
+		<header><h1>About</h1></header>                
+                <div class="post-entry">
+                    <p><strong>Blending Realities<br />
+</strong>We develop <a href="http://projects.platipussoftwareinside.com/what-is-augment-reality-ar/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://projects.platipussoftwareinside.com/what-is-augment-reality-ar/&amp;source=gmail&amp;ust=1499023807487000&amp;usg=AFQjCNF6xXDyD1LaQitVu2lfoXw9fJvrZg">Augmented Reality</a> (AR) and Virtual Reality (VR) experiences.</p>
+<p>We&#8217;ve been building Augmented Reality since 2008. Adding meaningful layers to the world around you and giving you new ways of interacting with it. AR is quickly becoming the new interface to the world and we develop the apps to make that transition as seamless as possible for you.</p>
+<p>VR is an important subset of AR. It&#8217;s less about interaction with your immediate environment and more about learning, playing and discovering in parallel realities. Now that VR hardware has become mature in the form of for example HTC Vive VR glasses or Google Daydream VR, we are able to build new worlds and create the greatest user experiences imaginable. In VR we create entirely new worlds for you. Fresh places to learn, places to be amazed, places to make connection with others.<br />
+<img data-attachment-id="1936" data-permalink="http://projects.platipussoftwareinside.com/about-platipus/thumbnail_ucd/" data-orig-file="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/thumbnail_UCD.png?fit=1259%2C1914" data-orig-size="1259,1914" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="thumbnail_UCD" data-image-description="" data-medium-file="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/thumbnail_UCD.png?fit=197%2C300" data-large-file="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/thumbnail_UCD.png?fit=674%2C1024" class="alignright wp-image-1936" src="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/thumbnail_UCD.png?resize=125%2C190" alt="" srcset="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/thumbnail_UCD.png?resize=674%2C1024 674w, https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/thumbnail_UCD.png?resize=197%2C300 197w, https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/thumbnail_UCD.png?resize=768%2C1168 768w, https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/thumbnail_UCD.png?w=1259 1259w" sizes="(max-width: 125px) 100vw, 125px" data-recalc-dims="1" /></p>
+<p><span class="im">Blending these technological realities with biological ones in a useful, convincing and engaging way is a challenge that requires the usage of tons of technology</span>. For the development of successful, solid Mixed Reality experiences we are very happy to use the power and versatility of the Unity 3D game engine.</p>
+<p>If your company is interested in hearing, seeing and (or) feeling what VR and AR are, we&#8217;d like to give you first hand experience with our <a href="http://projects.platipussoftwareinside.com/project/inspirational-sessions/" target="_blank" rel="noopener" data-saferedirecturl="https://www.google.com/url?hl=en&amp;q=http://projects.platipussoftwareinside.com/project/inspirational-sessions/&amp;source=gmail&amp;ust=1499023807487000&amp;usg=AFQjCNEgF-Qycp673EZSED4ap_JRKyOP2g">inspirational sessions</a>.</p>
+<p>&nbsp;</p>
+<p><strong>Our team</strong></p>
+<p><a href="http://projects.platipussoftwareinside.com/about-platipus/theo-lagendijk/"><img data-attachment-id="1944" data-permalink="http://projects.platipussoftwareinside.com/about-platipus/theoucd-2/" data-orig-file="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/TheoUCD-1.png?fit=1024%2C1661" data-orig-size="1024,1661" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="TheoUCD" data-image-description="" data-medium-file="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/TheoUCD-1.png?fit=185%2C300" data-large-file="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/TheoUCD-1.png?fit=631%2C1024" class="alignleft wp-image-1944" src="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/TheoUCD-1.png?resize=165%2C268" alt="" srcset="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/TheoUCD-1.png?resize=631%2C1024 631w, https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/TheoUCD-1.png?resize=185%2C300 185w, https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/TheoUCD-1.png?resize=768%2C1246 768w, https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/TheoUCD-1.png?w=1024 1024w" sizes="(max-width: 165px) 100vw, 165px" data-recalc-dims="1" /></a><a href=" http://projects.platipussoftwareinside.com/about-platipus/sylvia-van-delft/"><img data-attachment-id="1945" data-permalink="http://projects.platipussoftwareinside.com/about-platipus/sylviaucd-2/" data-orig-file="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/SylviaUCD-1.png?fit=1024%2C1661" data-orig-size="1024,1661" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="SylviaUCD" data-image-description="" data-medium-file="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/SylviaUCD-1.png?fit=185%2C300" data-large-file="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/SylviaUCD-1.png?fit=631%2C1024" class="alignleft wp-image-1945" src="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/SylviaUCD-1.png?resize=165%2C268" alt="" srcset="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/SylviaUCD-1.png?resize=631%2C1024 631w, https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/SylviaUCD-1.png?resize=185%2C300 185w, https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/SylviaUCD-1.png?resize=768%2C1246 768w, https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/SylviaUCD-1.png?w=1024 1024w" sizes="(max-width: 165px) 100vw, 165px" data-recalc-dims="1" /></a><a href="http://projects.platipussoftwareinside.com/about-platipus/coen-de-koning/"><img data-attachment-id="1946" data-permalink="http://projects.platipussoftwareinside.com/about-platipus/coenucd-2/" data-orig-file="https://i1.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/CoenUCD-1.png?fit=1024%2C1661" data-orig-size="1024,1661" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="CoenUCD" data-image-description="" data-medium-file="https://i1.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/CoenUCD-1.png?fit=185%2C300" data-large-file="https://i1.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/CoenUCD-1.png?fit=631%2C1024" class="alignleft wp-image-1946" src="https://i1.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/CoenUCD-1.png?resize=165%2C268" alt="" srcset="https://i1.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/CoenUCD-1.png?resize=631%2C1024 631w, https://i1.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/CoenUCD-1.png?resize=185%2C300 185w, https://i1.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/CoenUCD-1.png?resize=768%2C1246 768w, https://i1.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/CoenUCD-1.png?w=1024 1024w" sizes="(max-width: 165px) 100vw, 165px" data-recalc-dims="1" /></a><a href="http://projects.platipussoftwareinside.com/about-platipus/yorick-van-driel/"><img data-attachment-id="1947" data-permalink="http://projects.platipussoftwareinside.com/about-platipus/yorickucd-2/" data-orig-file="https://i0.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/YorickUCD-1.png?fit=1024%2C1661" data-orig-size="1024,1661" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="YorickUCD" data-image-description="" data-medium-file="https://i0.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/YorickUCD-1.png?fit=185%2C300" data-large-file="https://i0.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/YorickUCD-1.png?fit=631%2C1024" class="alignleft wp-image-1947" src="https://i0.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/YorickUCD-1.png?resize=165%2C268" alt="" srcset="https://i0.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/YorickUCD-1.png?resize=631%2C1024 631w, https://i0.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/YorickUCD-1.png?resize=185%2C300 185w, https://i0.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/YorickUCD-1.png?resize=768%2C1246 768w, https://i0.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/YorickUCD-1.png?w=1024 1024w" sizes="(max-width: 165px) 100vw, 165px" data-recalc-dims="1" /></a><a href="http://projects.platipussoftwareinside.com/about-platipus/thomas-de-fretes/"><img data-attachment-id="1948" data-permalink="http://projects.platipussoftwareinside.com/about-platipus/thomasucd-2/" data-orig-file="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/ThomasUCD-1.png?fit=1024%2C1661" data-orig-size="1024,1661" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="ThomasUCD" data-image-description="" data-medium-file="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/ThomasUCD-1.png?fit=185%2C300" data-large-file="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/ThomasUCD-1.png?fit=631%2C1024" class="alignleft wp-image-1948" src="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/ThomasUCD-1.png?resize=165%2C268" alt="" srcset="https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/ThomasUCD-1.png?resize=631%2C1024 631w, https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/ThomasUCD-1.png?resize=185%2C300 185w, https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/ThomasUCD-1.png?resize=768%2C1246 768w, https://i2.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2013/11/ThomasUCD-1.png?w=1024 1024w" sizes="(max-width: 165px) 100vw, 165px" data-recalc-dims="1" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><a href="http://projects.platipussoftwareinside.com/about-platipus/interns/"><img data-attachment-id="1952" data-permalink="http://projects.platipussoftwareinside.com/about-platipus/coen-de-koning/internucd/" data-orig-file="https://i0.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2017/08/InternUCD.png?fit=1024%2C1661" data-orig-size="1024,1661" data-comments-opened="0" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="InternUCD" data-image-description="" data-medium-file="https://i0.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2017/08/InternUCD.png?fit=185%2C300" data-large-file="https://i0.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2017/08/InternUCD.png?fit=631%2C1024" class="alignleft wp-image-1952" src="https://i0.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2017/08/InternUCD.png?resize=165%2C268" alt="" srcset="https://i0.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2017/08/InternUCD.png?resize=631%2C1024 631w, https://i0.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2017/08/InternUCD.png?resize=185%2C300 185w, https://i0.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2017/08/InternUCD.png?resize=768%2C1246 768w, https://i0.wp.com/projects.platipussoftwareinside.com/wp-content/uploads/2017/08/InternUCD.png?w=1024 1024w" sizes="(max-width: 165px) 100vw, 165px" data-recalc-dims="1" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Platipus &#8211; Augment Everything</strong></p>
+<p>Hoogstraat 70<br />
+3131BN Vlaardingen<br />
+contact &lt; at &gt; platipus.nl</p>
+<p>&nbsp;</p>
+<div id='contact-form-195'>
+<form action='http://projects.platipussoftwareinside.com/about-platipus/#contact-form-195' method='post' class='contact-form commentsblock'>
+
+<div>
+		<label for='g195-name' class='grunion-field-label name'>Name<span>(required)</span></label>
+		<input type='text' name='g195-name' id='g195-name' value='' class='name'  required aria-required='true'/>
+	</div>
+
+<div>
+		<label for='g195-email' class='grunion-field-label email'>Email<span>(required)</span></label>
+		<input type='email' name='g195-email' id='g195-email' value='' class='email'  required aria-required='true'/>
+	</div>
+
+<div>
+		<label for='g195-phone' class='grunion-field-label text'>Phone</label>
+		<input type='text' name='g195-phone' id='g195-phone' value='' class='text'  />
+	</div>
+
+<div>
+		<label for='contact-form-comment-g195-message' class='grunion-field-label textarea'>Message</label>
+		<textarea name='g195-message' id='contact-form-comment-g195-message' rows='20' class='textarea'  ></textarea>
+	</div>
+	<p class='contact-submit'>
+		<input type='submit' value='Submit &#187;' class='pushbutton-wide'/>
+		<input type='hidden' name='contact-form-id' value='195' />
+		<input type='hidden' name='action' value='grunion-contact-form' />
+		<input type='hidden' name='contact-form-hash' value='03d02d036ccd015db0efcb4319020bfdf19ba830' />
+	</p>
+</form>
+</div>
+<p><strong>And about our name..</strong></p>
+<p><em><strong>&#8220;</strong>A Platypus is an egg-laying, duck-billed, beaver-tailed, otter-footed mammal. A water/land duck. What does that have to do with AR? A platypus lives in the water and on the land. A foot in both words, this might sound familiar to many AR developers. Augmented Reality does just that, bridges the gap between two worlds, the real and the digital<strong>&#8221; </strong></em><em><strong><a href="http://junaio.wordpress.com/2013/05/28/platypus/" target="_blank" rel="noopener">-junaio</a></strong></em></p>
+                    	
+	<!-- Display children if page has children -->
+				</div><!-- end of post-hierarchy -->
+
+		<footer class="post-data">
+			
+                	
+				 
+                	</div><!-- end of .post-meta -->
+		</footer>
+            <div class="post-edit"></div> 
+            </article><!-- end of #post-195 -->
+            
+			
+
+
+           
+         
+        
+          
+      
+        </div><!-- end of #content-full -->
+
+</div><!-- end of #wrapper -->
+</div><!-- end of #container -->
+
+	<div style="display:none">
+	</div>
+
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-35077944-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+
+<!--[if lte IE 8]>
+<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='http://projects.platipussoftwareinside.com/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel-ie8fix.css?ver=20121024' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='http://projects.platipussoftwareinside.com/wp-content/plugins/jetpack/modules/photon/photon.js?ver=20130122'></script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201744'></script>
+<script type='text/javascript' src='http://projects.platipussoftwareinside.com/wp-content/themes/PilotFishCopy/js/main.js'></script>
+<script type='text/javascript' src='http://projects.platipussoftwareinside.com/wp-includes/js/wp-embed.min.js?ver=4.8.3'></script>
+<script type='text/javascript' src='http://projects.platipussoftwareinside.com/wp-content/plugins/jetpack/_inc/spin.js?ver=1.3'></script>
+<script type='text/javascript' src='http://projects.platipussoftwareinside.com/wp-content/plugins/jetpack/_inc/jquery.spin.js?ver=1.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"http:\/\/projects.platipussoftwareinside.com\/wp-admin\/admin-ajax.php","nonce":"5bc5d4c8cf","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"1","login_url":"http:\/\/projects.platipussoftwareinside.com\/wp-login.php?redirect_to=http%3A%2F%2Fprojects.platipussoftwareinside.com%2Fabout-platipus%2F","blog_id":"1","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email (Required)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name (Required)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://projects.platipussoftwareinside.com/wp-content/plugins/jetpack/modules/carousel/jetpack-carousel.js?ver=20170209'></script>
+<script type='text/javascript' src='https://stats.wp.com/e-201744.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:5.4',blog:'133257437',post:'195',tz:'0',srv:'projects.platipussoftwareinside.com'} ]);
+	_stq.push([ 'clickTrackerInit', '133257437', '195' ]);
+</script>
+</body>
+</html>
