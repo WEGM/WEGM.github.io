@@ -1,0 +1,12 @@
+.introWrap {
+    width: 1180px;
+    margin: 0 auto 50px;
+}
+
+.introWrap p {
+    text-indent: 32px;
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 20px;
+    color: #333;
+}

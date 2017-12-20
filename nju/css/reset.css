@@ -1,0 +1,231 @@
+@charset "utf-8";
+
+li,
+textarea {
+    vertical-align: top
+}
+
+article,
+aside,
+body,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+html,
+iframe,
+menu,
+nav,
+section {
+    display: block
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    overflow-y: scroll;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #FFF;
+}
+
+article,
+aside,
+blockquote,
+body,
+button,
+code,
+dd,
+details,
+dl,
+dt,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+hr,
+input,
+legend,
+li,
+menu,
+nav,
+ol,
+p,
+pre,
+section,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0
+}
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    color: #333;
+    font: 16px/1.5 tahoma, 'PingFang SC', 'microsoft yahei', arial, 'helvetica neue', 'hiragino sans gb', sans-serif
+}
+
+html[lang=en] body {
+    font: 16px/1.5 tahoma, arial, 'helvetica neue', 'hiragino sans gb', sans-serif
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1em
+}
+
+a:active {
+    background-color: transparent
+}
+
+a:active,
+a:hover,
+a:link,
+a:visited {
+    outline: 0;
+    *star: expression(this.onFocus=this.blur())
+}
+
+b,
+cite,
+code,
+em,
+i,
+small,
+th {
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 500
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 1em;
+    box-sizing: content-box
+}
+
+button,
+input[type=button],
+input[type=submit] {
+    cursor: pointer
+}
+
+button[disabled],
+input[disabled] {
+    cursor: default
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+textarea {
+    overflow: auto
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset,
+iframe,
+img {
+    border: 0
+}
+
+img {
+    display: inline-block;
+    vertical-align: bottom;
+    -ms-interpolation-mode: bicubic
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+q:after,
+q:before {
+    content: ''
+}
+
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    visibility: hidden
+}
+
+.clearfix {
+    zoom: 1
+}
+
+body,
+html {
+    background: #FFF;
+    width: 100%;
+    min-height: 100%;
+}
+
+.w100 {
+    wdith: 100%;
+}
+
+.w1180 {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 8px;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar-track {
+    background: #F1F1F1;
+    border: thin solid lightgray;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bb103c;
+    border: thin solid #bb103c;
+    border-radius: 150px;
+}

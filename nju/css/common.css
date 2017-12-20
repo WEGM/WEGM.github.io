@@ -1,0 +1,266 @@
+html {
+    overflow-x: hidden;
+}
+
+* {
+    transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+}
+
+.navWrap {
+    position: relative;
+    width: 100%;
+    left: 0;
+    z-index: 9999;
+    background-color: #bb103c;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    z-index: 2;
+}
+
+.navWrap .navSet {
+    width: 1180px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.navWrap .navSet .logo {
+    display: inline-block;
+    overflow: hidden;
+    padding-top: 5px;
+    margin-left: -20px;
+}
+
+.navWrap .navSet .logo img {
+    height: 66px;
+}
+
+
+
+.navWrap .navList,
+.navWrap .navList li,
+.navWrap .navList li a {
+    width: auto;
+    display: block
+}
+
+.navWrap .navList {
+    height: 80px;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.navWrap .navList li {
+    float: left
+}
+
+.navWrap .navList li a {
+    float: left;
+    height: 80px;
+    padding: 0 30px;
+    line-height: 80px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    text-align: center;
+    border-bottom: 0 solid #bb103c;
+}
+
+.navWrap .navList li a i {
+    display: block;
+    height: 22px;
+    width: 1px;
+    background: #FFF;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -11px;
+    opacity: .3;
+    filter: alpha(opacity=30);
+}
+
+.navWrap .navList li.current a,
+.navWrap .navList li:hover a {
+    border-bottom: 4px solid #bb103c;
+    color: #bb103c;
+    line-height: 78px;
+    height: 76px;
+    background-color: #FFF;
+}
+
+.footer {
+    width: 100%;
+    margin: 0 auto;
+    color: #FFF;
+}
+
+.baseinfo {
+    background: #bb103c;
+    height: 200px;
+}
+
+.baseinfo .nav {
+    float: left;
+    width: 420px;
+    margin-top: 48px;
+}
+
+.baseinfo .nav p {
+    color: rgba(255, 255, 255, .8);
+    line-height: 24px;
+    font-size: 13px;
+    float: left;
+    margin-right: 20px;
+}
+
+.baseinfo .nav .title {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #FFF;
+}
+
+.baseinfo .logo {
+    float: left;
+    width: 309px;
+    height: 190px;
+    margin-left: 20px;
+    background: url(../images/logo.png) no-repeat center center;
+}
+
+.baseinfo .link {
+    float: right;
+    width: 220px;
+    margin-top: 85px;
+    text-align: center;
+}
+
+.baseinfo .link a {
+    padding-left: 0px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url(../images/shares.png) no-repeat 0 0;
+    float: left;
+    margin-right: 15px;
+}
+
+.baseinfo .link a.n1 {
+    background-position: -12px -2px;
+}
+
+.baseinfo .link a.n2 {
+    background-position: -63px -2px;
+}
+
+.baseinfo .link a.n3 {
+    background-position: -114px -2px;
+}
+
+.baseinfo .link a.n4 {
+    background-position: -172px -2px;
+}
+
+.copyright {
+    width: 100%;
+    background: #69001b;
+    color: #bb103c;
+}
+
+.copyright p {
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+.cover {
+    margin-bottom: 50px;
+}
+
+.cover img {
+    position: relative;
+    width: 1920px;
+    left: 50%;
+    margin-left: -960px;
+}
+
+.container {
+    position: relative;
+    width: 1180px;
+    margin: 30px auto 50px;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.paging {
+    height: 48px;
+    padding: 30px 0;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.paging .fl {
+    font-size: 14px;
+    line-height: 32px;
+}
+
+.paging .return {
+    color: #666;
+    border: 1px solid #ddd;
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    margin-top: 10px;
+    text-align: center;
+    width: 100px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.paging .return:hover {
+    color: #FFF;
+    background: #bb103c;
+    border: 1px solid #bb103c;
+}
+
+.topBtn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    bottom: 50px;
+    right: 20px;
+    background: rgba(0, 0, 0, .5);
+    z-index: 99;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.topBtn:hover {
+    background: rgba(0, 0, 0, .2);
+}
+
+.topBtn .toplink {
+    display: inline-block;
+    width: 38px;
+    background: url(../images/top.png) no-repeat;
+    background-size: 38px;
+    text-indent: -99999px;
+    overflow: hidden;
+    margin-top: 7px;
+    cursor: pointer;
+}

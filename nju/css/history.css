@@ -1,0 +1,166 @@
+.course-list {
+    position: relative;
+}
+
+.course-list .ovh {
+    width: 91%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: url(../images/line.png) repeat-x left center;
+}
+
+.course-list .ovh li {
+    list-style: none;
+    float: left;
+    opacity: 1 !important;
+    cursor: pointer;
+}
+
+.course-list li {
+    width: 300px;
+    position: relative;
+    margin-right: -93px;
+}
+
+.course-list .main {
+    padding: 17px 20px 27px;
+    background-color: #FBFBFB;
+    width: 260px;
+    color: #777;
+}
+
+.course-list .main p {
+    padding: 0 9px;
+    text-indent: 32px;
+}
+
+.course-list li .top {
+    background: url(../images/nav2.png) no-repeat left top;
+    padding-top: 45px;
+    height: 42px;
+    line-height: 42px;
+    font-family: "Arial";
+    font-size: 18px;
+    text-align: center;
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none;
+}
+
+.course-list li.odd {
+    margin-top: 0;
+}
+
+.course-list li.odd .top {
+    background: url(../images/nav1.png) no-repeat left bottom;
+    padding-bottom: 45px;
+    padding-top: 0;
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none;
+}
+
+.course-list .butn {
+    display: block;
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 50%;
+    margin-top: -21px;
+    cursor: pointer;
+}
+
+.course-list .prev {
+    background: url(../images/hleft.png) no-repeat center top;
+    left: 0;
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none;
+}
+
+.course-list .next {
+    background: url(../images/hright.png) no-repeat center top;
+    right: 0;
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none;
+}
+
+.course-list .butn:hover {
+    background-position: center bottom;
+}
+
+.course-list li:hover .top {
+    background: url(../images/nav2.png) no-repeat right top;
+    color: #fff;
+}
+
+.course-list li.odd:hover .top {
+    background: url(../images/nav1.png) no-repeat right top;
+    color: #fff;
+}
+
+.dtWrap h1 {
+    font-size: 34px;
+    line-height: 1.5;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.dtWrap h6 {
+    font-size: 18px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.dtWrap .txtWrap {
+    font-size: 16px;
+    color: #888;
+    line-height: 1.8;
+    text-indent: 34px;
+}
+
+.dtWrap .txtWrap p {
+    margin-bottom: 20px;
+}
+
+.dtWrap .txtWrap img {
+    display: block;
+    width: 580px;
+    margin: 50px auto 50px;
+    border: 8px solid #F1F1F1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3),
+    0 0 15px rgba(0, 0, 0, .5) inset;
+}
+
+.dtWrap .photo {
+    position: absolute;
+    width: 320px;
+    height: 200px;
+    overflow: hidden;
+    border: 8px solid #FFF;
+    border-radius: 3px;
+    top: -290px;
+    right: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5),
+    0 0 20px rgba(0, 0, 0, .5) inset;
+    background: #FFF;
+}
+
+.dtWrap .photo img {
+    width: 320px;
+    min-height: 200px;
+}
+
+.paging .prev:before {
+    content: '上一篇：';
+}
+
+.paging .next:before {
+    content: '下一篇：';
+}

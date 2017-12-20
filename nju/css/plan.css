@@ -1,0 +1,159 @@
+.dtWrap h1 {
+    font-size: 34px;
+    line-height: 1.5;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.dtWrap h6 {
+    font-size: 18px;
+    text-indent: 0;
+    margin: 0;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.dtWrap .txtWrap {
+    font-size: 16px;
+    color: #888;
+    line-height: 1.8;
+    text-indent: 34px;
+}
+
+.dtWrap .txtWrap p {
+    margin-bottom: 20px;
+}
+
+.dtWrap .photo {
+    position: absolute;
+    width: 320px;
+    height: 200px;
+    overflow: hidden;
+    border: 8px solid #FFF;
+    border-radius: 3px;
+    top: -290px;
+    right: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5),
+    0 0 20px rgba(0, 0, 0, .5) inset;
+    background: #FFF;
+}
+
+.dtWrap .photo img {
+    width: 320px;
+    min-height: 200px;
+}
+
+.prev:before {
+    content: '上一篇报告：';
+}
+
+.next:before {
+    content: '下一篇报告：';
+}
+
+table {
+    margin-bottom: 10px;
+    border-collapse: collapse;
+    display: table;
+    width: 1180px;
+    margin: 20px auto 50px;
+    border-top: 1px solid #F1F1F1;
+    border-right: 1px solid #F1F1F1;
+}
+
+table tr {
+    border-bottom: 1px solid #F1F1F1;
+}
+
+table tr:first-child:hover {
+    background: none;
+}
+
+table tr:hover {
+    background: #F1F1F1;
+    cursor: pointer;
+}
+
+table td.g1 {
+    width: 40px;
+}
+
+table td.g2 {
+    width: 500px;
+}
+
+table td.g3 {
+    width: 80px;
+}
+
+table td.g4 {
+    width: 160px;
+}
+
+table td {
+    padding: 10px 6px;
+    line-height: 1.6;
+    font-size: 16px;
+    border: 0px solid #fff;
+    text-align: left;
+    background: transparent;
+    border-left: 1px solid #F1F1F1;
+}
+
+table td:first-child {
+    text-align: center;
+}
+
+table {
+    margin-bottom: 10px;
+    border-collapse: collapse;
+    display: table;
+    width: 1180px;
+    margin: 20px auto 50px;
+    border-top: 1px solid #F1F1F1;
+    border-right: 1px solid #F1F1F1;
+}
+
+table tr {
+    border-bottom: 1px solid #F1F1F1;
+}
+
+table tr:first-child:hover {
+    background: none;
+}
+
+table tr:hover {
+    background: #F1F1F1;
+    cursor: pointer;
+}
+
+table td.g1 {
+    width: 40px;
+}
+
+table td.g2 {
+    width: 500px;
+}
+
+table td.g3 {
+    width: 80px;
+}
+
+table td.g4 {
+    width: 160px;
+}
+
+table td {
+    padding: 10px 6px;
+    line-height: 1.6;
+    font-size: 16px;
+    border: 0px solid #fff;
+    text-align: left;
+    background: transparent;
+    border-left: 1px solid #F1F1F1;
+}
+
+table td:first-child {
+    text-align: center;
+}

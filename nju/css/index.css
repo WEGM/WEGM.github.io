@@ -1,0 +1,193 @@
+.homeWrap {
+    padding: 0px 0;
+}
+
+.homeWrap .inner {
+    width: 1200px;
+    margin: 0 auto 50px;
+}
+
+#crossblock {
+    width: 1200px;
+    margin: 0 auto;
+    min-height: 280px;
+    _height: 280px;
+    padding-bottom: 20px;
+}
+
+#blockl {
+    float: left;
+    width: 410px;
+    min-height: 280px;
+    _height: 280px;
+}
+
+#blockm {
+    float: left;
+    width: 410px;
+    min-height: 280px;
+    _height: 280px;
+}
+
+#blockr {
+    float: right;
+    width: 380px;
+    min-height: 280px;
+    _height: 280px;
+}
+
+.blocklistW {
+    width: 390px;
+    overflow: hidden;
+}
+
+.blocktitle {
+    width: 400px;
+    height: 42px;
+    border-bottom: 2px solid #bb103c;
+}
+
+.blocktitlename {
+    position: relative;
+    width: 280px;
+    float: left;
+    padding-left: 40px;
+    height: 42px;
+    line-height: 42px;
+    color: #bb103c;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.blocktitlename:before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: url(../images/mark.png) no-repeat;
+    background-size: 30px;
+    position: absolute;
+    top: 8px;
+    left: 6px;
+}
+
+.blocktitlemore {
+    width: 70px;
+    float: right;
+    height: 20px;
+    line-height: 20px;
+    padding-top: 13px;
+    font-size: 13px;
+    color: #bb103c;
+}
+
+.blocktitlemore a {
+    color: #bb103c;
+}
+
+.blocklistbox {
+    width: 380px;
+    margin: 0 auto;
+    padding-top: 20px;
+    min-height: 200px;
+    _height: 200px;
+}
+
+.listui {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.listui.intro {
+    text-indent: 32px;
+}
+
+.listui ul {
+    margin: 0px;
+}
+
+.listui ul li {
+    height: 34px;
+    line-height: 34px;
+    list-style: none;
+    font-size: 15px;
+    padding-left: 15px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.listui ul li span {
+    float: left;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    -webkit-box-flex: 1;
+    height: inherit;
+}
+
+.listui ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.listui ul li em {
+    font-style: normal;
+    float: right;
+    color: #666;
+    margin-right: 20px;
+}
+
+.slideWrap {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.slideWrap .control {
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    z-index: 2;
+}
+
+.slideWrap .control a {
+    display: none;
+}
+
+.slideWrap .control .flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom: -30px;
+    text-align: center;
+}
+
+.slideWrap .control .flex-control-nav li {
+    margin: 0 8px;
+    display: inline-block;
+    zoom: 1;
+}
+
+.slideWrap .control .flex-control-paging li a {
+    display: inline-block;
+    cursor: pointer;
+    text-indent: -9999px;
+    border-radius: 50px;
+}
+
+.slideWrap .control .flex-control-paging li a {
+    width: 8px;
+    height: 8px;
+    background: #FFF;
+    vertical-align: middle;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+    -webkit-transition: all .2s ease-in;
+}
+
+.slideWrap .control .flex-control-paging li a.flex-active {
+    width: 13px;
+    height: 13px;
+    background: #FFF;
+    -webkit-transition: all .2s ease-in;
+}
