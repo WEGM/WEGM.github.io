@@ -1,0 +1,94 @@
+html {
+    background-color: #0c0a27;
+}
+body {
+    transition: background-color 2s
+}
+.app {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    color: #fafafa;
+    font-family: gameGiftFont,Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: .05em;
+    z-index: 1;
+    overflow: hidden
+}
+.container {
+	position: absolute;
+	display: flex;
+    flex-direction: column;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    overflow: hidden;
+    z-index: 10;
+}
+.intro {
+	padding-top: 32vh;
+	width: 92%;
+	margin: 0 auto !important;
+}
+.heading {
+    font-family: gameGiftFont,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.5;
+    letter-spacing: .05em;
+    padding-top: 24px;
+    padding-bottom: 30px;
+}
+.regular-text {
+    font-family: gameGiftFont,Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: .05em;
+}
+@media only screen and (min-width: 1800px) {
+	.intro {
+		padding-top: 38vh;
+		width: 100%;
+	}
+	.heading {
+	    font-size: 37px;
+	    line-height: 1.5;
+	    padding-bottom: 50px;
+	}
+	.regular-text {
+	    font-size: 20px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.intro {
+		padding-top: 20vh;
+		width: 100%;
+	}
+	.heading {
+	    font-size: 24px;
+	    line-height: 1.5;
+	    padding-bottom: 50px;
+	}
+	.regular-text {
+	    font-size: 18px;
+	}
+}
+
+.bgWrap {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	pointer-events: none;
+}
+.bgWrap video {
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+}
