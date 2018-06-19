@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>统一登录中心 @gameGift.cn</title>
+	<meta name="description" content="gameGift.cn手游网是面向手机游戏玩家的综合门户，提供有趣有态度的最新手游内容。汇聚手游社区、热门手游礼包，新游、泛娱乐、手游排行榜等，让你Get最新手游、分享你的热辣点评。" />
+	<meta name="keywords" content="手机游戏,手机单机游戏下载,手机网游下载,gamegift" />
+	<link rel="shortcut icon" href="statics/images/favicon.ico">
+	<link rel="Bookmark" href="statics/images/favicon.ico">
+	<!-- <script src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script> -->
+	<script src="//game.gtimg.cn/images/js/jquery/jquery-1.11.3.min.js"></script>
+	<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+	<script src="//cdn.bootcss.com/js-sha1/0.6.0/sha1.min.js"></script>
+
+	<link rel="stylesheet" href="ssologin/css/login.css">
+	<link rel="stylesheet" href="../statics/css/reset.css">
+	<link rel="stylesheet" href="../statics/css/header.css">
+</head>
+<body style="background:url('//open.egame.qq.com/material/static/img/bg.6cb4548.jpg') no-repeat 50% 50%;background-size:cover;">
+	<div id="App">
+		<div class="page-home">
+			<div class="page-wrap J_wrap">
+				<div class="page-section">
+					<div class="page-section-logo">
+						<div class="gamegift-logo"></div>
+					</div>
+					<div class="demo-basic">
+						<div class="kuma-uxform demo-basic-form kuma-uxform-edit-mode">
+							<div class="kuma-uxform-row">
+								<div class="kuma-uxform-field kuma-input-uxform-field kuma-uxform-field__layout-h" style="width:100%;display:table;">
+									<ul class="kuma-uxform-field-content edit-mode">
+										<li class="kuma-uxform-field-core">
+											<div class="kuma-uxform-left-icon">
+												<i class="iconfont icon-ren"></i>
+											</div>
+											<input class="kuma-input kuma-uxform-input-has-left" type="text" placeholder="域账号或工作账号" name="domainAccount" value="">
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="kuma-uxform-row">
+								<div class="kuma-uxform-field kuma-input-uxform-field kuma-uxform-field__layout-h" style="width:100%;display:table;">
+									<ul class="kuma-uxform-field-content edit-mode">
+										<li class="kuma-uxform-field-core">
+											<div class="kuma-uxform-left-icon">
+												<i class="iconfont icon-suo"></i>
+											</div>
+											<input class="kuma-input kuma-uxform-input-has-right kuma-uxform-input-has-left" type="password" placeholder="密 码" name="password">
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="kuma-uxform-row">
+								<div class="kuma-uxform-field kuma-other-uxform-field" style="width:100%;display:table;">
+									<button type="button" class="kuma-button kuma-button-primary sso-btn-submit kuma-button-lg"><span>登 录</span></button>
+								</div>
+							</div>
+							<div class="kuma-uxform-row help-row">
+								<div class="kuma-uxform-field kuma-uxform-field kuma-checkbox-group-uxform-field smsCode kuma-uxform-field__layout-h" style="width:50%;display:table;">
+									<ul class="kuma-uxform-field-content edit-mode">
+										<li class="kuma-uxform-field-core">
+										<div class="kuma-checkbox-group">
+											<label class="kuma-checkbox-group-item"><input type="checkbox" checked="" class="kuma-checkbox"><s></s><span class="kuma-checkbox-group-item-content"><span>保持登录</span></span></label>
+										</div>
+										</li>
+									</ul>
+								</div>
+								<div class="kuma-uxform-field kuma-other-uxform-field help-wrap" style="width:50%;display:table;">
+									<span>忘记密码</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../statics/js/top_js/gamegift_top_201806.js"></script>
+	<script src="../statics/js/header_js/gamegift_header_201806.js"></script>
+	<script src="../statics/js/footer_js/gamegift_footer_201806.js"></script>
+
+	<script type="text/javascript">
+		$('.sso-btn-submit').click(function(event) {
+			var name = $('input[name="domainAccount"]').val();
+			var pwd = $('input[name="password"]').val();
+			if (name == 'admin' && sha1(md5(pwd)) == 'eff9fe8f6c2353e3bf45dbcbeee2320dd3a39425') {
+				alert('成功登陆');
+			} else {
+				alert('请正确输入账号或密码！');
+				$('input[name="domainAccount"], input[name="password"]').val('').blur();
+			}
+		});
+	</script>
+</body>
+</html>

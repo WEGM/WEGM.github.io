@@ -7,9 +7,11 @@
 	<meta name="robots" content="all" />
 	<meta name="author" content="gameGift-Gideas" />
 	<meta name="Copyright" content="gameGift" />
+	<title>gameGift.cn手游网-前瞻站</title>
 	<meta name="description" content="gameGift.cn手游网是面向手机游戏玩家的综合门户，提供有趣有态度的最新手游内容。汇聚手游社区、热门手游礼包，新游、泛娱乐、手游排行榜等，让你Get最新手游、分享你的热辣点评。" />
 	<meta name="keywords" content="手机游戏,手机单机游戏下载,手机网游下载,gamegift" />
-	<title>gameGift.cn手游网-前瞻站</title>
+	<link rel="shortcut icon" href="statics/images/favicon.ico">
+	<link rel="Bookmark" href="statics/images/favicon.ico">
 	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -19,72 +21,6 @@
 </head>
 <body>
 	<div id="app" class="app is-mounted">
-		<div id="header" class="header">
-			<div class="hd-border"></div>
-			<div class="hd hd_left">
-				<div class="logo"><img src="statics/images/logo.png" alt="gameGift logo"></div>
-			</div>
-			<div class="hd hd_right">
-				<nav class="nav">
-					<ul class="nav-list">
-						<li class="nav-item">
-							<a href="#" class="nav-item_link">游戏专区</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-item_link">礼包中心</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-item_link">赛事直播</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-item_link">新游首发</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-item_link">排行榜</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-item_link">高清壁纸</a>
-						</li>
-					</ul>
-				</nav>
-				<div class="hd-controls">
-					<div class="hd-controls_item">
-						<button type="button" class="menu-button">
-							<svg width="60" height="60" viewbox="0 0 100 100" class="svg-container">
-								<path d="M 100,0 L 100,100,0,100,0,0 Z" fill="none" class="svg-border"></path>
-							</svg>
-							<div class="menu-icon">
-								<div class="line-container line-container-1">
-									<span class="line line-1" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
-								</div>
-								<div class="line-container line-container-2">
-									<span class="line line-2"></span>
-								</div>
-								<div class="line-container line-container-3">
-									<span class="line line-3" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
-								</div>
-							</div>
-						</button>
-					</div>
-					<div class="hd-controls_item">
-						<a href="#" target="_blank" class="social-button">
-							<svg width="60" height="60" viewbox="0 0 100 100" class="svg-container"><path d="M 100,0 L 100,100,0,100,0,0 Z" fill="none" class="svg-border"></path></svg>
-							<div class="social-button_icon">
-								<img src="statics/images/wechat-logo.png" alt="wechat logo">
-							</div>
-						</a>
-					</div>
-					<div class="hd-controls_item">
-						<a href="https://www.weibo.com/gamegiftcn/" target="_blank" class="social-button">
-							<svg width="60" height="60" viewbox="0 0 100 100" class="svg-container"><path d="M 100,0 L 100,100,0,100,0,0 Z" fill="none" class="svg-border"></path></svg>
-							<div class="social-button_icon">
-								<img src="statics/images/weibo-logo.png" alt="weibo logo">
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="container">
 			<div class="intro row">
 				<div class="col-md-7">
@@ -99,16 +35,9 @@
 			<video src="https://statics.holdfun.cn/1022_d58ddd6573174f89b230cece6cad06d5.f0.mp4" class="p3-vbg" muted="true" loop="true" preload="auto" autoplay="true"></video>
 		</div>
 	</div>
-	<script type="text/javascript">
-		$('.menu-button').click(function(event) {
-			$('.nav').toggleClass('fade-enter');
-			$('.menu-button').toggleClass('is-collapsed');
-			if ($('.nav').hasClass('fade-enter')) {
-				$('.line-1, .line-3').css('transform', 'matrix(0.7071, 0.7071, -0.7071, 0.7071, 0, 0)');
-			} else {
-				$('.line-1, .line-3').css('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-			}
-		});
-	</script>
+
+	<script src="../statics/js/top_js/gamegift_top_201806.js"></script>
+	<script src="../statics/js/header_js/gamegift_header_201806.js"></script>
+	<script src="../statics/js/footer_js/gamegift_footer_201806.js"></script>
 </body>
 </html>

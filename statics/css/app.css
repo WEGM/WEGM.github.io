@@ -8,7 +8,6 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    min-height: 100vh;
     color: #fafafa;
     font-family: gameGiftFont,Helvetica,Arial,sans-serif;
     font-weight: 300;
@@ -91,4 +90,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	object-fit: cover;
+}
+#footer p {
+	color: rgba(0,0,0,.8)
 }
