@@ -58,8 +58,7 @@
 	font-size: 12px;
 	z-index: 8000;
 	font-family: Tahoma,simsun;
-	border: 1px solid #c9c9c9;
-	border-width: 1px 0
+	border-bottom: 1px solid #c9c9c9;
 }
 
 .ost_inner {
@@ -79,7 +78,7 @@
 }
 
 .ost_logo {
-	width: 180px;
+	width: 150px;
 	padding: 0 15px 0 0;
 	background: url(//www.gamegift.cn/statics/images/logo-top.png?v=201806) no-repeat;
 	background-size: auto 40px;
@@ -97,13 +96,13 @@
 }
 
 .ost_total {
-	width: 220px;
+	/*width: 220px;*/
 	background-position: -143px -120px
 }
 
 .ost_czsh {
 	float: left;
-	width: 118px;
+	width: 80px;
 	background: url(//ossweb-img.qq.com/images/js/topfiles/ost1410/logo.png) 0 12px no-repeat;
 	text-indent: 20px
 }
@@ -212,19 +211,21 @@
 }
 
 .ost_big {
-	width: 970px;
+	width: 1200px;
 	height: 185px;
 	padding: 0 3px 3px;
 	border-bottom: 1px solid #eee;
 	position: absolute;
 	top: 0;
+	z-index: -1;
 	left: 50%;
-	margin: 0 0 0 -488px;
+	background: #FFF;
+	margin: 0 0 0 -600px;
 	display: none
 }
 
 .ost_nb {
-	border: 0
+	border: 0;
 }
 
 .ost_bn {

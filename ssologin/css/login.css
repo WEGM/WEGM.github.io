@@ -1131,3 +1131,6 @@ input[type=checkbox], input[type=radio] {
     vertical-align: top;
     display: inline-block;
 }
+.logo {
+    display: none;
+}
