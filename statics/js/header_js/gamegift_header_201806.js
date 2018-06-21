@@ -30,7 +30,7 @@ var gamegiftHeader = (function(t, e) {
 	util.addHeaderHTML = function() {
 		var headerHTML = '';
 		headerHTML +='<div class="hd-border none"></div>';
-		headerHTML +='<div class="hd hd_left">';
+		headerHTML +='<div class="hd hd_left none">';
 		headerHTML +='    <div class="logo"><img src="statics/images/logo.png" alt="gameGift logo"></div>';
 		headerHTML +='</div>';
 		headerHTML +='<div class="hd hd_right">';
